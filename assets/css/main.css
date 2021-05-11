@@ -2449,6 +2449,8 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
+		
+
 		ul.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
@@ -3196,7 +3198,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 0 6em 0 ;
+				/* padding: 6em 0 6em 0 ; */
 			}
 
 	}
@@ -3586,4 +3588,12 @@ h3 + h5 {
 
 .projects {
 	margin-top: -70px !important;
+}
+
+.no-bullet li{
+	list-style: none;
+}
+
+.enlargen-hover img:hover {
+	transform: scale(1.03);
 }
