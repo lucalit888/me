@@ -1,7 +1,8 @@
-# My personal website
+# [My personal website](https://lucalit888.github.io/me/)
 
 - Name: Luca Chun Lun Lit
 - School: Dartmouth College 
 - Major: Computer Science and Mathematics
 
-[Deployed url](https://lucalit888.github.io/me/)
+HTML/CSS website featuring my background, education, skills, work experience and projects! 
+
