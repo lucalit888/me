@@ -3597,3 +3597,8 @@ h3 + h5 {
 .enlargen-hover img:hover {
 	transform: scale(1.03);
 }
+
+@media screen and (max-width: 1680px)
+	#header {
+		padding: 0;
+}
