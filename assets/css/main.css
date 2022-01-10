@@ -2452,7 +2452,7 @@ input, select, textarea {
 			vertical-align: middle;		}
 
 		ul.actions li:first-child {
-			padding-bottom: 1em;
+			padding-bottom: 0.6em;
 		}
 
 		ul.actions.special {
