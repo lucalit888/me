@@ -2438,17 +2438,21 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-direction: column;
 		cursor: default;
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
 	}
 
-		
+
 
 		ul.actions li {
-			padding: 0 0 0 1em;
-			vertical-align: middle;
+			padding: 0 0 0 0em;
+			vertical-align: middle;		}
+
+		ul.actions li:first-child {
+			padding-bottom: 1em;
 		}
 
 		ul.actions.special {
@@ -2891,7 +2895,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 9em 0 9em 0 ;
+		padding: 20vh 0 20vh 0 ;
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
@@ -2937,7 +2941,7 @@ input, select, textarea {
 			#header input[type="button"]:hover,
 			#header button:hover,
 			#header .button:hover {
-				background-color: rgba(255, 255, 255, 0.125);
+				background-color: rgba(255, 255, 255, 0.26);
 			}
 
 			#header input[type="submit"]:active,
@@ -3005,7 +3009,7 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
-			#header .actions:after {
+			#header .actions li:last-child:after {
 				background: #ffffff;
 				content: '';
 				height: 100vh;
@@ -3596,4 +3600,16 @@ h3 + h5 {
 @media screen and (max-width: 1680px)
 	#header {
 		padding: 0;
+}
+
+
+.course-work-code-prof {
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between !important;
+	width: 100%;
+}
+
+.centercoursework {
+	justify-content: center !important;
 }
