@@ -18,13 +18,8 @@ Learning, AR/VR, Natural Language Processing, Linear Algebra, Probability Theory
 WORK EXPERIENCE
 Appian Corporation (Low-Code Software Enterprise)
 Software Engineer II (MLOps)
-−
-−
 
-−
-−
-
-−
+Sep 2021 - Current
 
 Built & maintained a FastAPI application in Python to support custom machine learning model training and deployment.
 Delivered feature in <1 year, onboarding 20+ new enterprise customers, increasing Appian software adoption by 10%.
@@ -42,11 +37,6 @@ clean up unused AWS resources, reducing company costs by $8700 / month.
 
 Keystone Strategy (Strategy & Tech Consulting Firm)
 Data Science Intern
-−
-−
-
-−
-−
 
 Jun 2021 – Sep 2021
 
@@ -57,10 +47,6 @@ lines of Python code). Increased company valuation by ~ 30%, to $200 million, in
 
 Harmonize (HR Management Software Startup)
 Data Science Intern
-−
-
-Sep 2021 – Present
-
 Jul 2020 – Sep 2020
 
 Developed a logistic regression model to forecast customer churn using Python and SQL. Devised renewal strategies for
@@ -71,8 +57,6 @@ Worked with engineering team to enhance automated chatbot features, boosting pro
 RESEARCH + PROJECTS
 StoryCloud IO (Social Media Mobile App)
 Founding Engineer
-−
-−
 
 Jun 2023 – Present
 
@@ -81,7 +65,9 @@ application with 40+ integration-tested RESTful endpoints, using AWS ECS with Fa
 Integrated endpoints with AWS cloud services, including DynamoDB, SQS, S3, Lambda. In addition, setup an
 Application Load Balancer for traffic distribution, and used CloudFront to enable request caching on GET operations.
 
-Technical: Python, Terraform, Git, AWS SDK, YAML, C#, HTML/CSS, Linux, Docker, Kubernetes
+Technical proficient languages: Python, Terraform, Git, YAML
+Working knowledge of:, C#, HTML/CSS,
 Certifications: AWS Certified Developer
+Technologies I work with: Docker, AWS cloud services, Kubernetes
 
 
