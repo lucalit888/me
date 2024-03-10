@@ -44,35 +44,19 @@ async function loadResume() {
     resumeText = await response.text();
 }
 
-let questionCount = 0; // Initialize question count
-
 async function askQuestion() {
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
     const question = questionElement.value.trim();
 
-    // Do not proceed if the question is empty or if the chatbot is still responding to the previous question
-    if (!question || isChatOpen === false) {
+    // Do not proceed if the question is empty
+    if (!question) {
         return;
-    }
-
-    if (questionCount >= 10) {
-        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! I need a small break! 🥵" </div>`;
     }
 
     // Display user's question in chat history
     const chatHistory = document.getElementById('chatHistory');
     chatHistory.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
-
-    // Clear the input field for the next question
-    questionElement.value = '';
-
-    setTimeout(() => {
-        questionCount = 0; // Reset the question count after one minute
-    }, 60000);
-
-    // Prevent further input until the response from the last question has been printed
-    isChatOpen = false;
 
     // Define the payload to send to your AWS Lambda function via API Gateway
     const payload = {
@@ -94,7 +78,6 @@ async function askQuestion() {
     if (!response.ok) {
 //        , response.status, response.statusText);
         chatHistory.innerHTML += `<div><strong>Luca:</strong> "Sorry, I couldn't get a response. Ask me something else, or try again later!"</div>`;
-        isChatOpen = true; // Re-enable input if there's an error
         return;
     }
 
@@ -105,13 +88,11 @@ async function askQuestion() {
     // Display the chatbot's answer in chat history
     chatHistory.innerHTML += `<div><strong>Luca:</strong> ${bodyObject.choices && bodyObject.choices.length > 0 ? bodyObject.choices[0].message.content : "Sorry, I couldn't tell you the answer to that. Ask me something else?"}</div>`;
 
-    // Re-enable input after the response has been printed
-    isChatOpen = true;
+    // Clear the input field for the next question
+    questionElement.value = '';
 
     // Scroll the chat history to the bottom so the latest interaction is visible
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
-
-
 
 window.onload = loadResume;

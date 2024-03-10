@@ -3661,6 +3661,7 @@ h3 + h5 {
     flex-grow: 1;
     overflow-y: auto;
     padding-right: 5px; /* Avoids text sticking to the scrollbar */
+    max-height: 300px; /* Set a maximum height for the chat history */
 }
 
 /* Style the question input area for better interaction */
