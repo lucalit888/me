@@ -3623,7 +3623,6 @@ h3 + h5 {
     right: 20px;
     width: 350px; /* Slightly wider for a more spacious layout */
     background-color: #f9f9f9; /* A softer background color */
-    border: 1px solid #e0e0e0; /* Lighter border color */
     border-radius: 10px; /* More pronounced border radius for a modern look */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
     display: flex;
@@ -3638,11 +3637,14 @@ h3 + h5 {
     background-color: #0056b3; /* Deeper blue for more contrast */
     color: white;
     padding: 15px; /* More padding for better spacing */
+    padding-top: 5px;
+    padding-bottom: 5px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Arial, sans-serif; /* Modern font choice */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
+    font-weight: bold;
     font-size: 18px; /* Larger font size for readability */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -3651,9 +3653,10 @@ h3 + h5 {
 #chatContent {
     display: flex;
     flex-direction: column;
-    padding: 15px; /* Increased padding for better text spacing */
+    padding: 12px; /* Increased padding for better text spacing */
     background-color: white; /* Bright background to enhance text readability */
-    font-family: Arial, sans-serif; /* Consistent font with the header */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
+    font-size: 16px;
 }
 
 /* Ensure chat history is easily scrollable and readable */
@@ -3662,15 +3665,18 @@ h3 + h5 {
     overflow-y: auto;
     padding-right: 5px; /* Avoids text sticking to the scrollbar */
     max-height: 300px; /* Set a maximum height for the chat history */
+    font-size: 16px;
 }
 
 /* Style the question input area for better interaction */
 #question {
-    margin-top: 15px; /* More space above the question input */
+    margin-top: 10px; /* More space above the question input */
+    margin-bottom: 10px;
     padding: 10px; /* Padding inside the input for text comfort */
     border: 1px solid #ccc; /* Subtle border for definition */
     border-radius: 5px; /* Rounded corners for the input field */
-    font-family: Arial, sans-serif; /* Consistent typography */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
+    font-size: 16px;
 }
 
 /* Styling the close button for a more intuitive interaction */
@@ -3680,6 +3686,8 @@ h3 + h5 {
     background: transparent; /* Ensures no background color */
     padding: 5px 10px; /* Proper padding for clickable area */
     cursor: pointer;
+    align-items: center !important;
+    justify-content: center !important;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for interaction */
 }
 
@@ -3735,7 +3743,6 @@ h3 + h5 {
 
 /* Chat Icon Animation on Hover */
 .chat-icon {
-    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
     animation: pulseGlow 2s infinite;/* Transition for pulsing and glowing */
 }
 
@@ -3749,4 +3756,38 @@ h3 + h5 {
         transform: scale(1.3); /* Slightly larger */
         box-shadow: 0 0 15px #007bff, 0 0 30px #007bff; /* Enhanced glowing effect */
     }
+}
+
+
+/* Bouncing dots - doesn't work*/
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+.bounce-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  background-color: #ffffff; /* Or any color that fits the chatbot theme */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+  z-index: 100000;
+}
+
+.bounce-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.bounce-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.bounce-dot:nth-child(3) {
+  animation-delay: 0;
 }

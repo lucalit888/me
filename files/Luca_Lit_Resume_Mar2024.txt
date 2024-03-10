@@ -1,73 +1,63 @@
-Luca Chun Lun Lit
-+1 (603) 359-9239
-
-Luca.Lit.21@dartmouth.edu
-
-linkedin.com/in/luca-lit/
+Name: Luca Chun Lun Lit
+Phone Number: +1 (603) 359-9239
+Email: Luca.Lit.21@dartmouth.edu
+LinkedIn: linkedin.com/in/luca-lit/
 
 EDUCATION
 Dartmouth College, Hanover, NH
-June 2021
-
-Mathematics, Computer Science, B.A.
+Graduated June 2021
+Computer Science, Mathematics B.A. Double major.
 GPA: 3.95 / 4.00
 Honors: Summa Cum Laude (Top 5%), Phi Beta Kappa, Rufus Choate Scholar, Presidential Scholar, Neukom Scholar
 Relevant Coursework: Data Structures and Algorithm, Software Systems Design, Full-Stack Web Development, Machine
 Learning, AR/VR, Natural Language Processing, Linear Algebra, Probability Theory, Statistical Modelling
 
 WORK EXPERIENCE
-Appian Corporation (Low-Code Software Enterprise)
+1. Appian Corporation (Low-Code Software Enterprise)
 Software Engineer II (MLOps)
-
 Sep 2021 - Current
-
-Built & maintained a FastAPI application in Python to support custom machine learning model training and deployment.
+- Built & maintained a FastAPI application in Python to support custom machine learning model training and deployment.
 Delivered feature in <1 year, onboarding 20+ new enterprise customers, increasing Appian software adoption by 10%.
-Implemented 30+ unit & integration tested endpoints for uploading datasets & running ML model training +inference.
+- Implemented 30+ unit & integration tested endpoints for uploading datasets & running ML model training +inference.
 Containerized the app using Docker, and deployed it using ArgoCD. Provisioned and managed Gitlab pipelines to
 automate CI/CD, setup a monitoring and alerts system using Prometheus, and added Jaeger tracing to backend services.
-Optimized file upload by parallelizing calls to AWS S3, reducing latency for 200 concurrent file uploads - from 10 to 5s.
-Reduced inference completion time by 85%, by migrating AWS Batch Transform to Kubernetes jobs.
-Reduced API latency for training + inference endpoints by 70%, by implementing an asynchronous processing system
+- Optimized file upload by parallelizing calls to AWS S3, reducing latency for 200 concurrent file uploads - from 10 to 5s.
+- Reduced inference completion time by 85%, by migrating AWS Batch Transform to Kubernetes jobs.
+- Reduced API latency for training + inference endpoints by 70%, by implementing an asynchronous processing system
 using 1) AWS SQS to queue tasks and 2) K8s Operators to autoscale jobs for processing those compute-intensive tasks.
-Also owned end-to-end implementation of a file retention system using the same queueing mechanism.
-Provisioned AWS cloud services backing the API’s persistent metadata storage, secure file storage and ML model
+- Also owned end-to-end implementation of a file retention system using the same queueing mechanism.
+- Provisioned AWS cloud services backing the API’s persistent metadata storage, secure file storage and ML model
 training using Terraform (i.e. DynamoDB, S3, KMS, Sagemaker, SQS). Created scheduled Gitlab CI pipelines to
 clean up unused AWS resources, reducing company costs by $8700 / month.
 
-Keystone Strategy (Strategy & Tech Consulting Firm)
+2. Keystone Strategy (Strategy & Tech Consulting Firm)
 Data Science Intern
-
 Jun 2021 – Sep 2021
-
-Pre-processed 170,000+ rows of customer service data using numpy + pandas, and trained a deep learning NLP model
+- Pre-processed 170,000+ rows of customer service data using numpy + pandas, and trained a deep learning NLP model
 to outperform a formerly employed 3rd party software, increasing prediction accuracy from 89% to 98.6%.
-Trained proprietary ML model to predict precise repair solutions to defected home appliances using textual data (~ 800
+- Trained proprietary ML model to predict precise repair solutions to defected home appliances using textual data (~ 800
 lines of Python code). Increased company valuation by ~ 30%, to $200 million, in preparation for M&A considerations.
 
-Harmonize (HR Management Software Startup)
+3. Harmonize (HR Management Software Startup)
 Data Science Intern
 Jul 2020 – Sep 2020
-
-Developed a logistic regression model to forecast customer churn using Python and SQL. Devised renewal strategies for
+- Developed a logistic regression model to forecast customer churn using Python and SQL. Devised renewal strategies for
 the marketing team using customer segmentation analysis. Increased retention rate by ~20% in the subsequent year.
-Automated a script using Selenium to scrape product reviews from review platforms, reporting 20+ bugs and defects.
+- Automated a script using Selenium to scrape product reviews from review platforms, reporting 20+ bugs and defects.
 Worked with engineering team to enhance automated chatbot features, boosting product adoption by 22% in 3 months.
 
 RESEARCH + PROJECTS
 StoryCloud IO (Social Media Mobile App)
 Founding Engineer
-
 Jun 2023 – Present
-
-Co-founder and solo backend developer for an AI-assisted story-telling app. Deployed a Docker-containerized FastAPI
+- Co-founder and solo backend developer for an AI-assisted story-telling app. Deployed a Docker-containerized FastAPI
 application with 40+ integration-tested RESTful endpoints, using AWS ECS with Fargate Spot instances.
-Integrated endpoints with AWS cloud services, including DynamoDB, SQS, S3, Lambda. In addition, setup an
+- Integrated endpoints with AWS cloud services, including DynamoDB, SQS, S3, Lambda. In addition, setup an
 Application Load Balancer for traffic distribution, and used CloudFront to enable request caching on GET operations.
 
-Technical proficient languages: Python, Terraform, Git, YAML
-Working knowledge of:, C#, HTML/CSS,
+Technical coding proficiencies (proficient): Python, Terraform, Git, YAML
+Technical coding proficiencies (working knowledge): C#, HTML/CSS
 Certifications: AWS Certified Developer
-Technologies I work with: Docker, AWS cloud services, Kubernetes
+Other technologies: Docker, AWS cloud services, Kubernetes
 
 

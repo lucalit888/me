@@ -50,14 +50,17 @@ async function askQuestion() {
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
     const question = questionElement.value.trim();
+//    const typingIndicator = document.createElement('div');
+//    typingIndicator.classList.add('typing-indicator');
+//    typingIndicator.innerHTML = '<span class="bounce-dot"></span><span class="bounce-dot"></span><span class="bounce-dot"></span>';
 
     // Do not proceed if the question is empty or if the chatbot is still responding to the previous question
     if (!question || isChatOpen === false) {
         return;
     }
 
-    if (questionCount >= 10) {
-        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! I need a small break! 🥵" </div>`;
+    if (questionCount >= 8) {
+        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! I need a break! 🥵" </div>`;
     }
 
     // Display user's question in chat history
@@ -69,7 +72,7 @@ async function askQuestion() {
 
     setTimeout(() => {
         questionCount = 0; // Reset the question count after one minute
-    }, 60000);
+    }, 60000*2);
 
     // Prevent further input until the response from the last question has been printed
     isChatOpen = false;
@@ -80,12 +83,15 @@ async function askQuestion() {
         context: resumeText // This should be a summary of your resume.
     };
 
+//    chatHistory.appendChild(typingIndicator); // Append the typing indicator to the chat history
+//    chatHistory.scrollTop = chatHistory.scrollHeight;
+
     // Make the API call to your API Gateway endpoint
     const response = await fetch('https://selssv957e.execute-api.us-east-1.amazonaws.com/Production//ask', { // Replace with your actual endpoint URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Origin': 'http://localhost:8000'
+            'Origin': 'https://lucalit888.github.io'
         },
         body: JSON.stringify(payload)
     });
@@ -101,6 +107,9 @@ async function askQuestion() {
     const data = await response.json();
     const bodyObject = JSON.parse(data.body);
     const content = bodyObject.choices[0].message.content;
+//
+//    chatHistory.removeChild(typingIndicator); // Remove the typing indicator from the chat history
+//    chatHistory.scrollTop = chatHistory.scrollHeight;
 
     // Display the chatbot's answer in chat history
     chatHistory.innerHTML += `<div><strong>Luca:</strong> ${bodyObject.choices && bodyObject.choices.length > 0 ? bodyObject.choices[0].message.content : "Sorry, I couldn't tell you the answer to that. Ask me something else?"}</div>`;
