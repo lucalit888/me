@@ -3613,3 +3613,139 @@ h3 + h5 {
 .centercoursework {
 	justify-content: center !important;
 }
+
+/* LLM */
+
+/* Existing CSS for the chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 350px; /* Slightly wider for a more spacious layout */
+    background-color: #f9f9f9; /* A softer background color */
+    border: 1px solid #e0e0e0; /* Lighter border color */
+    border-radius: 10px; /* More pronounced border radius for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    z-index: 1000;
+    overflow: hidden; /* Ensures no content leaks outside the border radius */
+}
+
+/* Header styling for a more appealing look */
+#chatHeader {
+    background-color: #0056b3; /* Deeper blue for more contrast */
+    color: white;
+    padding: 15px; /* More padding for better spacing */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Modern font choice */
+    font-size: 18px; /* Larger font size for readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Chat content styling with improved spacing and readability */
+#chatContent {
+    display: flex;
+    flex-direction: column;
+    padding: 15px; /* Increased padding for better text spacing */
+    background-color: white; /* Bright background to enhance text readability */
+    font-family: Arial, sans-serif; /* Consistent font with the header */
+}
+
+/* Ensure chat history is easily scrollable and readable */
+#chatHistory {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px; /* Avoids text sticking to the scrollbar */
+}
+
+/* Style the question input area for better interaction */
+#question {
+    margin-top: 15px; /* More space above the question input */
+    padding: 10px; /* Padding inside the input for text comfort */
+    border: 1px solid #ccc; /* Subtle border for definition */
+    border-radius: 5px; /* Rounded corners for the input field */
+    font-family: Arial, sans-serif; /* Consistent typography */
+}
+
+/* Styling the close button for a more intuitive interaction */
+#closeBtn {
+    color: white !important; /* Ensures the text color is white */
+    border: none !important; /* Removes any border */
+    background: transparent; /* Ensures no background color */
+    padding: 5px 10px; /* Proper padding for clickable area */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for interaction */
+}
+
+/* Close Button Interaction on Hover */
+#closeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background highlight on hover */
+    color: white; /* Ensures text color remains white */
+}
+
+
+/* New CSS for the minimized chat icon */
+.chat-icon {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Adjust the .hidden class */
+.hidden {
+    display: none;
+}
+
+/* Assuming you have a send button with an id of 'sendBtn' */
+#sendButton {
+    /* Other necessary styling for the send button */
+    background: white; /* Default blue background */
+    transition: background-color 0.5s; /* Smooth transition for background color */
+}
+
+#sendButton:hover {
+    background: white; /* Change background to white on hover */
+    animation: pulsate 1s infinite alternate; /* Pulsating animation on hover */
+}
+
+@keyframes pulsate {
+    0% {
+        background: white; /* Start with white */
+    }
+    100% {
+        background: #b3d9ff; /* End with blue */
+    }
+}
+
+/* Chat Icon Animation on Hover */
+.chat-icon {
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+    animation: pulseGlow 2s infinite;/* Transition for pulsing and glowing */
+}
+
+/* Keyframes for pulsing and glowing effect */
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff; /* Glowing effect */
+    }
+    50% {
+        transform: scale(1.3); /* Slightly larger */
+        box-shadow: 0 0 15px #007bff, 0 0 30px #007bff; /* Enhanced glowing effect */
+    }
+}

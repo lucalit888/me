@@ -20,6 +20,21 @@
 
 <body class="is-preload">
 
+	<section id="llm">
+		<div id="chatbot" class="chatbot">
+            <div id="chatHeader" onclick="toggleChat()">
+                <span>Resume Chatbot</span>
+                <button id="closeBtn">➖</button>
+            </div>
+            <div id="chatContent">
+                <div id="chatHistory" class="chat-history"></div>
+                <input type="text" id="question" placeholder="Ask me anything...">
+                <button id="sendButton" onclick="askQuestion()">Send 🚀</button>
+            </div>
+        </div>
+		<script src="assets/js/chatbot_script.js"></script>
+	</section>
+
 	<!-- Header -->
 	<section id="header">
 		<div class="inner">
