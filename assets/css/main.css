@@ -3619,7 +3619,7 @@ h3 + h5 {
 /* Existing CSS for the chatbot */
 .chatbot {
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     right: 20px;
     width: 350px; /* Slightly wider for a more spacious layout */
     background-color: #f9f9f9; /* A softer background color */

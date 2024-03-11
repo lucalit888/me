@@ -86,33 +86,39 @@ async function askQuestion() {
 //    chatHistory.appendChild(typingIndicator); // Append the typing indicator to the chat history
 //    chatHistory.scrollTop = chatHistory.scrollHeight;
 
-    // Make the API call to your API Gateway endpoint
-    const response = await fetch('https://selssv957e.execute-api.us-east-1.amazonaws.com/Production//ask', { // Replace with your actual endpoint URL
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Origin': 'https://lucalit888.github.io'
-        },
-        body: JSON.stringify(payload)
-    });
+    try {
+        // Make the API call to your API Gateway endpoint
+        const response = await fetch('https://selssv957e.execute-api.us-east-1.amazonaws.com/Production//ask', { // Replace with your actual endpoint URL
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Origin': 'https://lucalit888.github.io'
+            },
+            body: JSON.stringify(payload)
+        });
 
-    // Check if the response from the API Gateway is not OK (error handling)
-    if (!response.ok) {
-//        , response.status, response.statusText);
-        chatHistory.innerHTML += `<div><strong>Luca:</strong> "Sorry, I couldn't get a response. Ask me something else, or try again later!"</div>`;
+            // Check if the response from the API Gateway is not OK (error handling)
+        if (!response.ok) {
+    //        , response.status, response.statusText);
+            chatHistory.innerHTML += `<div><strong>Luca:</strong> Sorry, I couldn't get a response. Ask me something else, or try again later!</div>`;
+            isChatOpen = true; // Re-enable input if there's an error
+            return;
+        }
+
+        const data = await response.json();
+        const bodyObject = JSON.parse(data.body);
+        const content = bodyObject.choices[0].message.content;
+    //
+    //    chatHistory.removeChild(typingIndicator); // Remove the typing indicator from the chat history
+    //    chatHistory.scrollTop = chatHistory.scrollHeight;
+
+        // Display the chatbot's answer in chat history
+        chatHistory.innerHTML += `<div><strong>Luca:</strong> ${bodyObject.choices && bodyObject.choices.length > 0 ? bodyObject.choices[0].message.content : 'Sorry, I couldn\'t tell you the answer to that. Ask me something else?'}</div>`;
+    } catch (error) {
+        // Handle any errors that occurred during the fetch or processing
+        chatHistory.innerHTML += `<div><strong>Luca:</strong> Sorry, I couldn't get a response. Please try again later!</div>`;
         isChatOpen = true; // Re-enable input if there's an error
-        return;
     }
-
-    const data = await response.json();
-    const bodyObject = JSON.parse(data.body);
-    const content = bodyObject.choices[0].message.content;
-//
-//    chatHistory.removeChild(typingIndicator); // Remove the typing indicator from the chat history
-//    chatHistory.scrollTop = chatHistory.scrollHeight;
-
-    // Display the chatbot's answer in chat history
-    chatHistory.innerHTML += `<div><strong>Luca:</strong> ${bodyObject.choices && bodyObject.choices.length > 0 ? bodyObject.choices[0].message.content : "Sorry, I couldn't tell you the answer to that. Ask me something else?"}</div>`;
 
     // Re-enable input after the response has been printed
     isChatOpen = true;
@@ -121,6 +127,43 @@ async function askQuestion() {
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-
-
 window.onload = loadResume;
+
+// Function to make an element draggable
+function makeDraggable(dragHandle, dragTarget) {
+    let offsetX;
+
+    dragHandle.addEventListener('mousedown', function(e) {
+        const rect = dragTarget.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
+
+    function onMouseMove(event) {
+        let newX = event.clientX - offsetX;
+
+        // Convert newX to calculate right
+        const newRight = window.innerWidth - newX - dragTarget.offsetWidth;
+
+        // Ensure the chat window stays within the screen boundaries
+        const maxRight = window.innerWidth - dragTarget.offsetWidth;
+
+        const calculatedRight = Math.min(Math.max(0, newRight), maxRight);
+
+        dragTarget.style.right = `${calculatedRight}px`;
+        // Remove the top and bottom style changes
+    }
+
+    function onMouseUp() {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
+}
+
+// Call this function with the header as the handle and the chat window as the target
+const chatHeader = document.querySelector('#chatHeader'); // Adjust if needed
+const chatWindow = document.querySelector('.chatbot'); // Adjust if needed
+makeDraggable(chatHeader, chatWindow);
+
