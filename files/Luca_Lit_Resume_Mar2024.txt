@@ -3,16 +3,24 @@ Phone Number: +1 (603) 359-9239
 Email: Luca.Lit.21@dartmouth.edu
 LinkedIn: linkedin.com/in/luca-lit/
 
-EDUCATION
+## SUMMARY:
+
+I'm a graduate from Dartmouth College with a double major in Computer Science and Mathematics. Currently working as a ML Infrastructure + DevOps (MLOps) engineer at Appian Corporation, building a high performance platform to train and deploy custom ML Models in a rapid and scalable manner. My passions lie in software engineering and project management for socially impactful endeavors. Some apps I've built:
+StoryCloud: a social media app to record and share your life stories with family and friends.
+Fryday: an AI-powered recipe sharing platform that enables chefs to instantly turn cooking videos into full recipes.
+
+## EDUCATION:
+
 Dartmouth College, Hanover, NH
-Graduated June 2021
+September 2017 - June 2021
 Computer Science, Mathematics B.A. Double major.
 GPA: 3.95 / 4.00
 Honors: Summa Cum Laude (Top 5%), Phi Beta Kappa, Rufus Choate Scholar, Presidential Scholar, Neukom Scholar
 Relevant Coursework: Data Structures and Algorithm, Software Systems Design, Full-Stack Web Development, Machine
 Learning, AR/VR, Natural Language Processing, Linear Algebra, Probability Theory, Statistical Modelling
 
-WORK EXPERIENCE
+## WORK EXPERIENCE:
+
 1. Appian Corporation (Low-Code Software Enterprise)
 Software Engineer II (MLOps)
 Sep 2021 - Current
@@ -46,18 +54,65 @@ the marketing team using customer segmentation analysis. Increased retention rat
 - Automated a script using Selenium to scrape product reviews from review platforms, reporting 20+ bugs and defects.
 Worked with engineering team to enhance automated chatbot features, boosting product adoption by 22% in 3 months.
 
-RESEARCH + PROJECTS
-StoryCloud IO (Social Media Mobile App)
-Founding Engineer
+## PROJECTS:
+
+1. StoryCloud IO (Social Media Mobile App)
+Backend Engineer
 Jun 2023 – Present
 - Co-founder and solo backend developer for an AI-assisted story-telling app. Deployed a Docker-containerized FastAPI
 application with 40+ integration-tested RESTful endpoints, using AWS ECS with Fargate Spot instances.
 - Integrated endpoints with AWS cloud services, including DynamoDB, SQS, S3, Lambda. In addition, setup an
 Application Load Balancer for traffic distribution, and used CloudFront to enable request caching on GET operations.
 
+2. Fryday IO (Recipe Sharing App)
+Full-Stack Engineer
+Jan 2024 - Present
+- Co-founder and full stack developer for an AI-powered recipe sharing platform that enables chefs (e.g. cooking influencers) to upload videos and instantly turn them into full recipes. 
+- Built on React, Firebase and Chakra UI.
+
+3. Portal VR: Virtual Reality Minigame showcasing Particle Systems, Sandbox Interactions and Gameplay Design
+
+4. ScubaDiVR: A VR educational scuba experience in the Great Barrier Reef
+
+5. aMAZEing: Minigame in Unity with 3rd person controller and mouse-tracking camera
+
+6. TelePortal: Minigame showcasing shader graphs for mirror portal effects & teleportation
+
+7. AR Fitness: Augmented Reality fitness app using Vuforia, with full-body workout plans
+
+8. Resumov: No-code platform to generate personal portfolios based on resume details. Built with ReactJS, AWS S3 and MongoDB.
+
+
+## RESEARCH: 
+
+1. NLP Research Scientist
+June 2020 - March 2021
+Dartmouth Sustainable Health Lab
+Research: Understanding Public Perception and Communication around Telehealth during the COVID-19 Pandemic.
+
+Developed a data pipeline to scrape telehealth-related tweets and trained a linear support vector machine learning model to classify tweets based on user type and tweet intent. Applied sentiment analysis and hetero-functional graph theory to characterize healthcare provider and patient communication patterns in the Twitter social network. Thesis published and presented at the IEEE Smart Cities Conference 2020 and INFORMS Annual Scientific Conference.
+
+2. AV Research Associate
+July 2020 - September 2020
+Dartmouth Robotics Lab
+Research: Autonomous Vehicles Motion Planning
+
+Devising an obstacle avoidance system for autonomous surface vehicles. Implemented 3D LIDAR point cloud clustering for object detection and classification, and an Extended Kalman Filter to estimate object positions based on motion models
+
+3. Robotics Research Associate
+June 2019 - January 2020
+Dartmouth Robotics Lab
+Research: Collision-Resistant 3D Printable Drones
+
+Developed a paired simulator and interactive controller for the aviation of soft-body drones with morphable geometry. Employed tetrahedral meshing, finite element method and linear quadratic regulator to optimize rotor thrusts.
+Engineered a 3D-printed functional quadcopter model live demoed at the Dartmouth 3D-Printing Symposium in 2019.
+
+
+
 Technical coding proficiencies (proficient): Python, Terraform, Git, YAML
 Technical coding proficiencies (working knowledge): C#, HTML/CSS
 Certifications: AWS Certified Developer
 Other technologies: Docker, AWS cloud services, Kubernetes
+Learning: React, Firebase, Airflow
 
 
