@@ -60,7 +60,7 @@ async function askQuestion() {
     }
 
     if (questionCount >= 8) {
-        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! I need a break! 🥵" </div>`;
+        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! Taking a quick break - ask me again in a few! 😁" </div>`;
     }
 
     // Display user's question in chat history
