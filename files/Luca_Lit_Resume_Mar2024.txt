@@ -21,9 +21,33 @@ Learning, AR/VR, Natural Language Processing, Linear Algebra, Probability Theory
 
 ## WORK EXPERIENCE:
 
-1. Appian Corporation (Low-Code Software Enterprise)
+1. Point72 Ventures (Venture Capital Fund) 
+Data Engineer (Full Stack) 
+Jul 2024 – Present
+- PeopleGPT Lite: Built an AI-powered search engine for top founder talent and startups. Optimized ingestion of 2M+
+LinkedIn profiles into a VectorDB using multi-processing, and implemented RAG to enable natural language querying
+with sub-second latency. Achieved cost savings of $7,500/month by replacing a 3rd party SaaS tool.
+- Network Leads Gen: Engineered a fully-automated leads generation system in Python, running ETL pipelines out of Apache
+Airflow, with S3 as data lake, and PostgreSQL DB as data warehouse. Processed 3000+ Twitter and LinkedIn profiles /
+week, exceeding network meeting goals by 22%, increasing new contacts by >70%, & boosting deal flows by 30%.
+- Pre-Meeting Notes: Built a microservice in Python to automate research on people and companies, ingesting millions of
+profiles from PeopleDataLabs and Affinity into PostgreSQL DB. Designed caching layers and optimized SQL queries to
+reduce data retrieval to sub-second latency. Integrated the tool with Outlook Calendar using Microsoft Graph API,
+generating over 1000+ investor meeting notes/month for the VC team, eliminating all manual research efforts.
+- Smart Leads: Developed a Slackbot to notify investors of new startup and stealth company leads on a daily basis, with
+AI-generated outreach emails ready-to-send with a button press. Deployed event listeners using WebSockets, leveraging
+Celery + Redis as a queueing system to support processing of concurrent message interactions for 50+ users.
+- MWAA on EKS: Migrated MWAA (Airflow) jobs from AWS Fargate, to Kubernetes pods managed by EKS, addressing a key
+limitation in Fargate’s CPU/storage management causing frequent MWAA crashes. Enabled isolated task execution
+environments, improved reliability for critical workflows, and reduced operational costs by $1,000 /month.
+- CRM Sync: Implemented a robust pipeline to ingest data on 100,000+ organizations, 150,000+ people, and 15,000+ deal
+pipelines from Attio CRM into a PostgreSQL, optimized with multi-processing for parallel API calls and exponential
+backoff for retries. Set up a public webhook with AWS Lambda to enable real-time updates to the internal DB, enabling
+SQL-powered querying, custom data enrichments, and personalized dashboards for deal flow monitoring.
+
+2. Appian Corporation (Low-Code Software Enterprise)
 Software Engineer II (MLOps)
-Sep 2021 - Current
+Sep 2021 - Jun 2024
 - Built & maintained a FastAPI application in Python to support custom machine learning model training and deployment.
 Delivered feature in <1 year, onboarding 20+ new enterprise customers, increasing Appian software adoption by 10%.
 - Implemented 30+ unit & integration tested endpoints for uploading datasets & running ML model training +inference.
@@ -38,7 +62,7 @@ using 1) AWS SQS to queue tasks and 2) K8s Operators to autoscale jobs for proce
 training using Terraform (i.e. DynamoDB, S3, KMS, Sagemaker, SQS). Created scheduled Gitlab CI pipelines to
 clean up unused AWS resources, reducing company costs by $8700 / month.
 
-2. Keystone Strategy (Strategy & Tech Consulting Firm)
+3. Keystone Strategy (Strategy & Tech Consulting Firm)
 Data Science Intern
 Jun 2021 – Sep 2021
 - Pre-processed 170,000+ rows of customer service data using numpy + pandas, and trained a deep learning NLP model
@@ -46,7 +70,7 @@ to outperform a formerly employed 3rd party software, increasing prediction accu
 - Trained proprietary ML model to predict precise repair solutions to defected home appliances using textual data (~ 800
 lines of Python code). Increased company valuation by ~ 30%, to $200 million, in preparation for M&A considerations.
 
-3. Harmonize (HR Management Software Startup)
+4. Harmonize (HR Management Software Startup)
 Data Science Intern
 Jul 2020 – Sep 2020
 - Developed a logistic regression model to forecast customer churn using Python and SQL. Devised renewal strategies for
@@ -111,8 +135,8 @@ Engineered a 3D-printed functional quadcopter model live demoed at the Dartmouth
 
 Technical coding proficiencies (proficient): Python, Terraform, Git, YAML
 Technical coding proficiencies (working knowledge): C#, HTML/CSS
-Certifications: AWS Certified Developer
-Other technologies: Docker, AWS cloud services, Kubernetes
-Learning: React, Firebase, Airflow
+Certifications: AWS Certified Developer, Certified Kubernetes Application Developer
+Adept at technologies: Docker, AWS cloud services, Kubernetes, Airflow
+Learning: React, Firebase
 
 
