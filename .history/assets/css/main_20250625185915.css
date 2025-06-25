@@ -3807,11 +3807,11 @@ h3 + h5 {
     transform: translateX(5px);
 }
 
-/* Close button with white color and dark blue styling */
+/* Close button with dark blue styling */
 #closeBtn {
     background: none;
     border: none;
-    color: white !important;
+    color: white;
     font-size: 20px;
     cursor: pointer;
     padding: 5px;
@@ -3824,7 +3824,6 @@ h3 + h5 {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #closeBtn::before {
@@ -3843,7 +3842,6 @@ h3 + h5 {
 #closeBtn:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
-    color: white !important;
 }
 
 #closeBtn:hover::before {
@@ -3881,10 +3879,10 @@ h3 + h5 {
     background: linear-gradient(135deg, #1976d2 0%, #1a237e 50%, #1565c0 100%);
 }
 
-/* Enhanced Send button with proper white text alignment */
+/* Enhanced Send button with proper text alignment */
 #sendButton {
     background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
-    color: white !important;
+    color: white;
     border: none;
     padding: 12px 24px;
     border-radius: 25px;
@@ -3905,7 +3903,6 @@ h3 + h5 {
     text-align: center;
     line-height: 1;
     min-width: 80px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 #sendButton::before {
@@ -3929,7 +3926,6 @@ h3 + h5 {
         0 8px 25px rgba(21, 101, 192, 0.5),
         0 4px 15px rgba(26, 35, 126, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    color: white !important;
 }
 
 #sendButton:hover::before {
@@ -3938,7 +3934,6 @@ h3 + h5 {
 
 #sendButton:active {
     transform: translateY(0) scale(0.98);
-    color: white !important;
 }
 
 /* Enhanced keyframe animations with dark blue colors */

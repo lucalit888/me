@@ -3614,19 +3614,19 @@ h3 + h5 {
 	justify-content: center !important;
 }
 
-/* LLM - Enhanced Modern Chatbot Styling with Dark Blue Theme */
+/* LLM - Enhanced Modern Chatbot Styling */
 
-/* Main chatbot container with dark blue gradients */
+/* Existing CSS for the chatbot with modern enhancements */
 .chatbot {
     position: fixed;
     bottom: 10px;
     right: 20px;
     width: 350px;
-    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #4facfe 100%);
     border-radius: 15px;
     box-shadow: 
-        0 20px 40px rgba(26, 35, 126, 0.4),
-        0 10px 20px rgba(40, 53, 147, 0.3),
+        0 20px 40px rgba(102, 126, 234, 0.3),
+        0 10px 20px rgba(118, 75, 162, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
@@ -3641,8 +3641,8 @@ h3 + h5 {
 .chatbot:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 
-        0 25px 50px rgba(26, 35, 126, 0.5),
-        0 15px 30px rgba(40, 53, 147, 0.4),
+        0 25px 50px rgba(102, 126, 234, 0.4),
+        0 15px 30px rgba(118, 75, 162, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -3654,9 +3654,9 @@ h3 + h5 {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-        rgba(26, 35, 126, 0.1) 0%, 
-        rgba(40, 53, 147, 0.1) 50%, 
-        rgba(21, 101, 192, 0.1) 100%);
+        rgba(102, 126, 234, 0.1) 0%, 
+        rgba(118, 75, 162, 0.1) 50%, 
+        rgba(79, 172, 254, 0.1) 100%);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -3666,9 +3666,9 @@ h3 + h5 {
     opacity: 1;
 }
 
-/* Header styling with dark blue gradient */
+/* Header styling with dynamic gradient */
 #chatHeader {
-    background: linear-gradient(135deg, #1565c0 0%, #1976d2 50%, #1a237e 100%);
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
     color: white;
     padding: 15px;
     padding-top: 5px;
@@ -3681,7 +3681,7 @@ h3 + h5 {
     font-weight: bold;
     font-size: 18px;
     box-shadow: 
-        0 4px 20px rgba(21, 101, 192, 0.4),
+        0 4px 20px rgba(79, 172, 254, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
@@ -3707,7 +3707,7 @@ h3 + h5 {
 }
 
 #chatHeader:hover {
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #4facfe 50%, #00f2fe 100%);
     transform: scale(1.02);
 }
 
@@ -3732,8 +3732,8 @@ h3 + h5 {
     bottom: 0;
     background: linear-gradient(145deg, 
         rgba(255, 255, 255, 0.1) 0%, 
-        rgba(21, 101, 192, 0.05) 50%, 
-        rgba(26, 35, 126, 0.1) 100%);
+        rgba(79, 172, 254, 0.05) 50%, 
+        rgba(102, 126, 234, 0.1) 100%);
     pointer-events: none;
 }
 
@@ -3754,22 +3754,22 @@ h3 + h5 {
 }
 
 #chatHistory::-webkit-scrollbar-track {
-    background: rgba(26, 35, 126, 0.1);
+    background: rgba(102, 126, 234, 0.1);
     border-radius: 3px;
 }
 
 #chatHistory::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #1a237e, #1565c0);
+    background: linear-gradient(135deg, #667eea, #4facfe);
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
 #chatHistory::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #1565c0, #1a237e);
+    background: linear-gradient(135deg, #4facfe, #667eea);
     transform: scale(1.1);
 }
 
-/* Modern input field with dark blue border */
+/* Modern input field with floating effect */
 #question {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -3779,7 +3779,7 @@ h3 + h5 {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16px;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #1a237e, #1565c0) border-box;
+                linear-gradient(135deg, #667eea, #4facfe) border-box;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     outline: none;
     position: relative;
@@ -3789,42 +3789,36 @@ h3 + h5 {
 #question:focus {
     border-color: transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #1565c0, #1976d2) border-box;
+                linear-gradient(135deg, #4facfe, #00f2fe) border-box;
     box-shadow: 
-        0 0 20px rgba(21, 101, 192, 0.4),
-        0 0 40px rgba(26, 35, 126, 0.2);
+        0 0 20px rgba(79, 172, 254, 0.3),
+        0 0 40px rgba(102, 126, 234, 0.1);
     transform: translateY(-1px) scale(1.02);
 }
 
 #question::placeholder {
-    color: #9e9e9e;
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    color: #667eea;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 #question:focus::placeholder {
-    opacity: 0.6;
-    transform: translateX(5px);
+    opacity: 0.5;
 }
 
-/* Close button with white color and dark blue styling */
+/* Enhanced close button */
 #closeBtn {
-    background: none;
-    border: none;
     color: white !important;
-    font-size: 20px;
+    border: none !important;
+    background: transparent;
+    padding: 8px 12px;
     cursor: pointer;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border-radius: 50%;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #closeBtn::before {
@@ -3834,57 +3828,55 @@ h3 + h5 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.3s ease;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #closeBtn:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-    color: white !important;
+    transform: rotate(90deg) scale(1.1);
+    color: white;
 }
 
 #closeBtn:hover::before {
-    transform: scale(1);
+    opacity: 1;
 }
 
-/* Chat icon with dark blue gradient */
+/* Enhanced minimized chat icon with pulse animation */
 .chat-icon {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #4facfe 50%, #00f2fe 100%);
     border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    box-shadow: 
-        0 8px 25px rgba(26, 35, 126, 0.4),
-        0 4px 15px rgba(21, 101, 192, 0.3);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: white;
-    font-size: 24px;
-    animation: pulseGlow 2s infinite;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 8px 25px rgba(102, 126, 234, 0.4),
+        0 4px 12px rgba(79, 172, 254, 0.3);
+    animation: pulseGlow 3s infinite ease-in-out;
 }
 
 .chat-icon:hover {
-    transform: scale(1.1) rotate(10deg);
+    transform: scale(1.15) translateY(-2px);
     box-shadow: 
-        0 12px 35px rgba(26, 35, 126, 0.5),
-        0 6px 20px rgba(21, 101, 192, 0.4);
-    background: linear-gradient(135deg, #1976d2 0%, #1a237e 50%, #1565c0 100%);
+        0 12px 35px rgba(102, 126, 234, 0.5),
+        0 6px 20px rgba(79, 172, 254, 0.4);
+    animation-play-state: paused;
 }
 
-/* Enhanced Send button with proper white text alignment */
+/* Enhanced send button with modern styling */
 #sendButton {
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
-    color: white !important;
+    background: linear-gradient(135deg, #667eea 0%, #4facfe 50%, #00f2fe 100%);
+    color: white;
     border: none;
     padding: 12px 24px;
     border-radius: 25px;
@@ -3894,18 +3886,11 @@ h3 + h5 {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 
-        0 4px 15px rgba(26, 35, 126, 0.4),
+        0 4px 15px rgba(102, 126, 234, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1;
-    min-width: 80px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 #sendButton::before {
@@ -3923,13 +3908,12 @@ h3 + h5 {
 }
 
 #sendButton:hover {
-    background: linear-gradient(135deg, #1565c0 0%, #1976d2 50%, #1a237e 100%);
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
     transform: translateY(-2px) scale(1.05);
     box-shadow: 
-        0 8px 25px rgba(21, 101, 192, 0.5),
-        0 4px 15px rgba(26, 35, 126, 0.4),
+        0 8px 25px rgba(79, 172, 254, 0.4),
+        0 4px 15px rgba(102, 126, 234, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    color: white !important;
 }
 
 #sendButton:hover::before {
@@ -3938,24 +3922,23 @@ h3 + h5 {
 
 #sendButton:active {
     transform: translateY(0) scale(0.98);
-    color: white !important;
 }
 
-/* Enhanced keyframe animations with dark blue colors */
+/* Enhanced keyframe animations */
 @keyframes pulseGlow {
     0%, 100% {
         transform: scale(1);
         box-shadow: 
-            0 8px 25px rgba(26, 35, 126, 0.4),
-            0 4px 12px rgba(21, 101, 192, 0.3),
-            0 0 0 0 rgba(26, 35, 126, 0.4);
+            0 8px 25px rgba(102, 126, 234, 0.4),
+            0 4px 12px rgba(79, 172, 254, 0.3),
+            0 0 0 0 rgba(102, 126, 234, 0.4);
     }
     50% {
         transform: scale(1.05);
         box-shadow: 
-            0 12px 35px rgba(26, 35, 126, 0.5),
-            0 6px 20px rgba(21, 101, 192, 0.4),
-            0 0 0 10px rgba(26, 35, 126, 0.1);
+            0 12px 35px rgba(102, 126, 234, 0.5),
+            0 6px 20px rgba(79, 172, 254, 0.4),
+            0 0 0 10px rgba(102, 126, 234, 0.1);
     }
 }
 
@@ -3968,7 +3951,7 @@ h3 + h5 {
     }
 }
 
-/* Enhanced bouncing dots with dark blue gradient colors */
+/* Enhanced bouncing dots with gradient colors */
 @keyframes bounce {
     0%, 80%, 100% {
         transform: scale(0) translateY(0);
@@ -3983,26 +3966,26 @@ h3 + h5 {
     width: 8px;
     height: 8px;
     margin-right: 3px;
-    background: linear-gradient(135deg, #1a237e, #1565c0);
+    background: linear-gradient(135deg, #667eea, #4facfe);
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out both;
     z-index: 100000;
-    box-shadow: 0 2px 5px rgba(26, 35, 126, 0.4);
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
 }
 
 .bounce-dot:nth-child(1) {
     animation-delay: -0.32s;
-    background: linear-gradient(135deg, #1a237e, #283593);
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .bounce-dot:nth-child(2) {
     animation-delay: -0.16s;
-    background: linear-gradient(135deg, #1565c0, #1976d2);
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
 .bounce-dot:nth-child(3) {
     animation-delay: 0;
-    background: linear-gradient(135deg, #1976d2, #1a237e);
+    background: linear-gradient(135deg, #00f2fe, #667eea);
 }
 
 /* Accessibility and interaction improvements */
@@ -4011,11 +3994,11 @@ h3 + h5 {
 }
 
 .chatbot *:focus {
-    outline: 2px solid rgba(21, 101, 192, 0.6);
+    outline: 2px solid rgba(79, 172, 254, 0.5);
     outline-offset: 2px;
 }
 
-/* Dark mode support with darker blue theme */
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
     #chatContent {
         background: rgba(30, 30, 30, 0.95);
@@ -4024,7 +4007,7 @@ h3 + h5 {
     
     #question {
         background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9)) padding-box,
-                    linear-gradient(135deg, #1a237e, #1565c0) border-box;
+                    linear-gradient(135deg, #667eea, #4facfe) border-box;
         color: #e0e0e0;
     }
     

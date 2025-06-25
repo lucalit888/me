@@ -3614,466 +3614,180 @@ h3 + h5 {
 	justify-content: center !important;
 }
 
-/* LLM - Enhanced Modern Chatbot Styling with Dark Blue Theme */
+/* LLM */
 
-/* Main chatbot container with dark blue gradients */
+/* Existing CSS for the chatbot */
 .chatbot {
     position: fixed;
     bottom: 10px;
     right: 20px;
-    width: 350px;
-    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
-    border-radius: 15px;
-    box-shadow: 
-        0 20px 40px rgba(26, 35, 126, 0.4),
-        0 10px 20px rgba(40, 53, 147, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    width: 350px; /* Slightly wider for a more spacious layout */
+    background-color: #f9f9f9; /* A softer background color */
+    border-radius: 10px; /* More pronounced border radius for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s;
     z-index: 1000;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translateZ(0);
+    overflow: hidden; /* Ensures no content leaks outside the border radius */
 }
 
-.chatbot:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 
-        0 25px 50px rgba(26, 35, 126, 0.5),
-        0 15px 30px rgba(40, 53, 147, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.chatbot::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(26, 35, 126, 0.1) 0%, 
-        rgba(40, 53, 147, 0.1) 50%, 
-        rgba(21, 101, 192, 0.1) 100%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.chatbot:hover::before {
-    opacity: 1;
-}
-
-/* Header styling with dark blue gradient */
+/* Header styling for a more appealing look */
 #chatHeader {
-    background: linear-gradient(135deg, #1565c0 0%, #1976d2 50%, #1a237e 100%);
+    background-color: #0056b3; /* Deeper blue for more contrast */
     color: white;
-    padding: 15px;
+    padding: 15px; /* More padding for better spacing */
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
     font-weight: bold;
-    font-size: 18px;
-    box-shadow: 
-        0 4px 20px rgba(21, 101, 192, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    font-size: 18px; /* Larger font size for readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-#chatHeader::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(255, 255, 255, 0.2), 
-        transparent);
-    transition: left 0.5s ease;
-}
-
-#chatHeader:hover::before {
-    left: 100%;
-}
-
-#chatHeader:hover {
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
-    transform: scale(1.02);
-}
-
-/* Chat content with glassmorphism effect */
+/* Chat content styling with improved spacing and readability */
 #chatContent {
     display: flex;
     flex-direction: column;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 12px; /* Increased padding for better text spacing */
+    background-color: white; /* Bright background to enhance text readability */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
     font-size: 16px;
-    position: relative;
 }
 
-#chatContent::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(145deg, 
-        rgba(255, 255, 255, 0.1) 0%, 
-        rgba(21, 101, 192, 0.05) 50%, 
-        rgba(26, 35, 126, 0.1) 100%);
-    pointer-events: none;
-}
-
-/* Enhanced chat history with smooth scrolling */
+/* Ensure chat history is easily scrollable and readable */
 #chatHistory {
     flex-grow: 1;
     overflow-y: auto;
-    padding-right: 5px;
-    max-height: 300px;
+    padding-right: 5px; /* Avoids text sticking to the scrollbar */
+    max-height: 300px; /* Set a maximum height for the chat history */
     font-size: 16px;
-    scroll-behavior: smooth;
-    position: relative;
-    z-index: 1;
 }
 
-#chatHistory::-webkit-scrollbar {
-    width: 6px;
-}
-
-#chatHistory::-webkit-scrollbar-track {
-    background: rgba(26, 35, 126, 0.1);
-    border-radius: 3px;
-}
-
-#chatHistory::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #1a237e, #1565c0);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-#chatHistory::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #1565c0, #1a237e);
-    transform: scale(1.1);
-}
-
-/* Modern input field with dark blue border */
+/* Style the question input area for better interaction */
 #question {
-    margin-top: 10px;
+    margin-top: 10px; /* More space above the question input */
     margin-bottom: 10px;
-    padding: 12px 16px;
-    border: 2px solid transparent;
-    border-radius: 25px;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 10px; /* Padding inside the input for text comfort */
+    border: 1px solid #ccc; /* Subtle border for definition */
+    border-radius: 5px; /* Rounded corners for the input field */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Consistent typography */
     font-size: 16px;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #1a237e, #1565c0) border-box;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    outline: none;
-    position: relative;
-    z-index: 1;
 }
 
-#question:focus {
-    border-color: transparent;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #1565c0, #1976d2) border-box;
-    box-shadow: 
-        0 0 20px rgba(21, 101, 192, 0.4),
-        0 0 40px rgba(26, 35, 126, 0.2);
-    transform: translateY(-1px) scale(1.02);
-}
-
-#question::placeholder {
-    color: #9e9e9e;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-#question:focus::placeholder {
-    opacity: 0.6;
-    transform: translateX(5px);
-}
-
-/* Close button with white color and dark blue styling */
+/* Styling the close button for a more intuitive interaction */
 #closeBtn {
-    background: none;
-    border: none;
-    color: white !important;
-    font-size: 20px;
+    color: white !important; /* Ensures the text color is white */
+    border: none !important; /* Removes any border */
+    background: transparent; /* Ensures no background color */
+    padding: 5px 10px; /* Proper padding for clickable area */
     cursor: pointer;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for interaction */
 }
 
-#closeBtn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.3s ease;
-}
-
+/* Close Button Interaction on Hover */
 #closeBtn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-    color: white !important;
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background highlight on hover */
+    color: white; /* Ensures text color remains white */
 }
 
-#closeBtn:hover::before {
-    transform: scale(1);
-}
 
-/* Chat icon with dark blue gradient */
+/* New CSS for the minimized chat icon */
 .chat-icon {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
     border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    box-shadow: 
-        0 8px 25px rgba(26, 35, 126, 0.4),
-        0 4px 15px rgba(21, 101, 192, 0.3);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: white;
-    font-size: 24px;
-    animation: pulseGlow 2s infinite;
-}
-
-.chat-icon:hover {
-    transform: scale(1.1) rotate(10deg);
-    box-shadow: 
-        0 12px 35px rgba(26, 35, 126, 0.5),
-        0 6px 20px rgba(21, 101, 192, 0.4);
-    background: linear-gradient(135deg, #1976d2 0%, #1a237e 50%, #1565c0 100%);
-}
-
-/* Enhanced Send button with proper white text alignment */
-#sendButton {
-    background: linear-gradient(135deg, #1a237e 0%, #1565c0 50%, #1976d2 100%);
-    color: white !important;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 
-        0 4px 15px rgba(26, 35, 126, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    line-height: 1;
-    min-width: 80px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-#sendButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(255, 255, 255, 0.3), 
-        transparent);
-    transition: left 0.6s ease;
+/* Adjust the .hidden class */
+.hidden {
+    display: none;
+}
+
+/* Assuming you have a send button with an id of 'sendBtn' */
+#sendButton {
+    /* Other necessary styling for the send button */
+    background: white; /* Default blue background */
+    transition: background-color 0.5s; /* Smooth transition for background color */
 }
 
 #sendButton:hover {
-    background: linear-gradient(135deg, #1565c0 0%, #1976d2 50%, #1a237e 100%);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 
-        0 8px 25px rgba(21, 101, 192, 0.5),
-        0 4px 15px rgba(26, 35, 126, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    color: white !important;
+    background: white; /* Change background to white on hover */
+    animation: pulsate 1s infinite alternate; /* Pulsating animation on hover */
 }
 
-#sendButton:hover::before {
-    left: 100%;
-}
-
-#sendButton:active {
-    transform: translateY(0) scale(0.98);
-    color: white !important;
-}
-
-/* Enhanced keyframe animations with dark blue colors */
-@keyframes pulseGlow {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 
-            0 8px 25px rgba(26, 35, 126, 0.4),
-            0 4px 12px rgba(21, 101, 192, 0.3),
-            0 0 0 0 rgba(26, 35, 126, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 
-            0 12px 35px rgba(26, 35, 126, 0.5),
-            0 6px 20px rgba(21, 101, 192, 0.4),
-            0 0 0 10px rgba(26, 35, 126, 0.1);
-    }
-}
-
-@keyframes shimmer {
+@keyframes pulsate {
     0% {
-        transform: translateX(-100%);
+        background: white; /* Start with white */
     }
     100% {
-        transform: translateX(100%);
+        background: #b3d9ff; /* End with blue */
     }
 }
 
-/* Enhanced bouncing dots with dark blue gradient colors */
+/* Chat Icon Animation on Hover */
+.chat-icon {
+    animation: pulseGlow 2s infinite;/* Transition for pulsing and glowing */
+}
+
+/* Keyframes for pulsing and glowing effect */
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff; /* Glowing effect */
+    }
+    50% {
+        transform: scale(1.3); /* Slightly larger */
+        box-shadow: 0 0 15px #007bff, 0 0 30px #007bff; /* Enhanced glowing effect */
+    }
+}
+
+
+/* Bouncing dots - doesn't work*/
 @keyframes bounce {
-    0%, 80%, 100% {
-        transform: scale(0) translateY(0);
-    }
-    40% {
-        transform: scale(1.0) translateY(-10px);
-    }
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
 }
 
 .bounce-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-right: 3px;
-    background: linear-gradient(135deg, #1a237e, #1565c0);
-    border-radius: 50%;
-    animation: bounce 1.4s infinite ease-in-out both;
-    z-index: 100000;
-    box-shadow: 0 2px 5px rgba(26, 35, 126, 0.4);
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  background-color: #ffffff; /* Or any color that fits the chatbot theme */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+  z-index: 100000;
 }
 
 .bounce-dot:nth-child(1) {
-    animation-delay: -0.32s;
-    background: linear-gradient(135deg, #1a237e, #283593);
+  animation-delay: -0.32s;
 }
 
 .bounce-dot:nth-child(2) {
-    animation-delay: -0.16s;
-    background: linear-gradient(135deg, #1565c0, #1976d2);
+  animation-delay: -0.16s;
 }
 
 .bounce-dot:nth-child(3) {
-    animation-delay: 0;
-    background: linear-gradient(135deg, #1976d2, #1a237e);
-}
-
-/* Accessibility and interaction improvements */
-.chatbot * {
-    box-sizing: border-box;
-}
-
-.chatbot *:focus {
-    outline: 2px solid rgba(21, 101, 192, 0.6);
-    outline-offset: 2px;
-}
-
-/* Dark mode support with darker blue theme */
-@media (prefers-color-scheme: dark) {
-    #chatContent {
-        background: rgba(30, 30, 30, 0.95);
-        color: #e0e0e0;
-    }
-    
-    #question {
-        background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9)) padding-box,
-                    linear-gradient(135deg, #1a237e, #1565c0) border-box;
-        color: #e0e0e0;
-    }
-    
-    #question::placeholder {
-        color: #a0a0a0;
-    }
-}
-
-/* Responsive design improvements */
-@media screen and (max-width: 480px) {
-    .chatbot {
-        width: calc(100vw - 40px);
-        right: 20px;
-        left: 20px;
-        bottom: 10px;
-    }
-    
-    .chat-icon {
-        right: 20px;
-        bottom: 20px;
-    }
-}
-
-/* Performance optimizations */
-.chatbot,
-.chat-icon,
-#sendButton,
-#question {
-    will-change: transform;
-}
-
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-    .chatbot,
-    .chat-icon,
-    #sendButton,
-    #question,
-    #closeBtn {
-        transition: none;
-        animation: none;
-    }
-    
-    .bounce-dot {
-        animation: none;
-    }
-    
-    @keyframes pulseGlow {
-        0%, 100% {
-            transform: none;
-        }
-    }
+  animation-delay: 0;
 }

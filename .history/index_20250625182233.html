@@ -23,13 +23,21 @@
 	<section id="llm">
 		<div id="chatbot" class="chatbot">
             <div id="chatHeader">
-                <span>Resume Bot  🤖</span>
+                <span>
+                    <span>Resume Bot</span>
+                    <span>🤖</span>
+                </span>
                 <button id="closeBtn" onclick="toggleChat()"><i class="fa fa-times"></i></button>
             </div>
             <div id="chatContent">
                 <div id="chatHistory" class="chat-history"></div>
-                <input type="text" id="question" placeholder="Ask me anything...">
-                <button id="sendButton" onclick="askQuestion()">Send 🚀</button>
+                <div class="input-container">
+                    <input type="text" id="question" placeholder="Ask me anything about my experience..." onkeypress="if(event.key==='Enter'){askQuestion()}">
+                    <button id="sendButton" onclick="askQuestion()">
+                        <span>Send</span>
+                        <span>🚀</span>
+                    </button>
+                </div>
             </div>
         </div>
 		<script src="assets/js/chatbot_script.js"></script>
