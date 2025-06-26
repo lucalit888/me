@@ -4078,7 +4078,378 @@ h3 + h5 {
     }
 }
 
-/* Ultra-Modern Coursework Section - Sleek & Clean */
+/* Enhanced Modern Coursework Section Styling */
+.course-work-code-prof {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 30px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
+	border-radius: 20px;
+	box-shadow: 
+		0 20px 40px rgba(0, 0, 0, 0.08),
+		0 10px 20px rgba(0, 0, 0, 0.04),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	gap: 40px;
+}
+
+.course-work-code-prof::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, 
+		rgba(99, 102, 241, 0.02) 0%, 
+		rgba(168, 85, 247, 0.02) 50%, 
+		rgba(236, 72, 153, 0.02) 100%);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.course-work-code-prof:hover::before {
+	opacity: 1;
+}
+
+.course-work-code-prof:hover {
+	transform: translateY(-8px);
+	box-shadow: 
+		0 30px 60px rgba(0, 0, 0, 0.12),
+		0 15px 30px rgba(0, 0, 0, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Icons Column Styling */
+.course-work-code-prof .col-6:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+	border-radius: 16px;
+	padding: 30px 20px;
+	margin-right: 20px;
+	min-width: 180px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.course-work-code-prof .col-6:first-child::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, 
+		transparent, 
+		rgba(99, 102, 241, 0.1), 
+		transparent);
+	transition: left 0.6s ease;
+}
+
+.course-work-code-prof:hover .col-6:first-child::before {
+	left: 100%;
+}
+
+.course-work-code-prof .col-6:first-child:hover {
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+	transform: scale(1.02);
+	border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Content Columns Styling */
+.course-work-code-prof .col-6:not(:first-child) {
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 16px;
+	padding: 30px 25px;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	position: relative;
+	overflow: hidden;
+}
+
+.course-work-code-prof .col-6:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.9);
+	transform: translateY(-4px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Header Styling */
+.course-work-code-prof header.major {
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.course-work-code-prof header.major h2 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #1e293b;
+	margin-bottom: 15px;
+	position: relative;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.course-work-code-prof header.major h2::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+	border-radius: 2px;
+	transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.course-work-code-prof .col-6:hover header.major h2::after {
+	width: 100px;
+}
+
+/* List Styling */
+.course-work-code-prof .coursework ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.course-work-code-prof .coursework ul li {
+	padding: 12px 20px;
+	margin-bottom: 8px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 12px;
+	border-left: 4px solid transparent;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+	font-weight: 500;
+	color: #374151;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.course-work-code-prof .coursework ul li::before {
+	content: '▶';
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #6366f1;
+	font-size: 10px;
+	transition: all 0.3s ease;
+}
+
+.course-work-code-prof .coursework ul li:hover {
+	background: rgba(255, 255, 255, 0.95);
+	border-left-color: #6366f1;
+	transform: translateX(8px);
+	box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+	color: #1e293b;
+}
+
+.course-work-code-prof .coursework ul li:hover::before {
+	color: #a855f7;
+	transform: translateY(-50%) scale(1.2);
+}
+
+/* Icons Grid Styling */
+.course-work-code-prof ul.major-icons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.course-work-code-prof ul.major-icons li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 16px;
+	padding: 20px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+	position: relative;
+	overflow: hidden;
+}
+
+.course-work-code-prof ul.major-icons li:hover {
+	background: rgba(255, 255, 255, 0.95);
+	transform: translateY(-6px) scale(1.05);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	border-color: rgba(99, 102, 241, 0.3);
+}
+
+.course-work-code-prof ul.major-icons li .icon {
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.course-work-code-prof ul.major-icons li:hover .icon {
+	transform: scale(1.15) rotate(5deg);
+}
+
+.course-work-code-prof ul.major-icons li:nth-child(1):hover .icon { color: #ef4444; }
+.course-work-code-prof ul.major-icons li:nth-child(2):hover .icon { color: #3b82f6; }
+.course-work-code-prof ul.major-icons li:nth-child(3):hover .icon { color: #10b981; }
+.course-work-code-prof ul.major-icons li:nth-child(4):hover .icon { color: #f59e0b; }
+.course-work-code-prof ul.major-icons li:nth-child(5):hover .icon { color: #8b5cf6; }
+.course-work-code-prof ul.major-icons li:nth-child(6):hover .icon { color: #ec4899; }
+
+.centercoursework {
+	justify-content: center !important;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 980px) {
+	.course-work-code-prof {
+		flex-direction: column;
+		padding: 25px;
+		gap: 30px;
+	}
+	
+	.course-work-code-prof .col-6:first-child {
+		margin-right: 0;
+		margin-bottom: 20px;
+		min-width: auto;
+		padding: 25px;
+	}
+	
+	.course-work-code-prof ul.major-icons {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.course-work-code-prof {
+		padding: 20px;
+		gap: 25px;
+		border-radius: 16px;
+	}
+	
+	.course-work-code-prof .col-6:first-child {
+		padding: 20px;
+	}
+	
+	.course-work-code-prof ul.major-icons {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+	}
+	
+	.course-work-code-prof .col-6:not(:first-child) {
+		padding: 20px;
+	}
+	
+	.course-work-code-prof .coursework ul li {
+		padding: 10px 16px;
+		font-size: 0.9rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.course-work-code-prof {
+		padding: 15px;
+		gap: 20px;
+		border-radius: 12px;
+	}
+	
+	.course-work-code-prof .col-6:first-child {
+		padding: 15px;
+	}
+	
+	.course-work-code-prof ul.major-icons {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+	
+	.course-work-code-prof ul.major-icons li {
+		padding: 15px;
+	}
+	
+	.course-work-code-prof .col-6:not(:first-child) {
+		padding: 15px;
+	}
+	
+	.course-work-code-prof header.major h2 {
+		font-size: 1.5rem;
+	}
+	
+	.course-work-code-prof .coursework ul li {
+		padding: 8px 14px;
+		font-size: 0.85rem;
+	}
+	
+	.course-work-code-prof .coursework ul li:hover {
+		transform: translateX(4px);
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.course-work-code-prof {
+		padding: 12px;
+		gap: 15px;
+	}
+	
+	.course-work-code-prof ul.major-icons {
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+	
+	.course-work-code-prof header.major h2 {
+		font-size: 1.3rem;
+	}
+	
+	.course-work-code-prof .coursework ul li {
+		font-size: 0.8rem;
+	}
+}
+
+/* Performance optimizations */
+.course-work-code-prof,
+.course-work-code-prof .col-6,
+.course-work-code-prof ul.major-icons li,
+.course-work-code-prof .coursework ul li {
+	will-change: transform;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.course-work-code-prof,
+	.course-work-code-prof .col-6,
+	.course-work-code-prof ul.major-icons li,
+	.course-work-code-prof .coursework ul li,
+	.course-work-code-prof header.major h2::after {
+		transition: none;
+		animation: none;
+	}
+	
+	.course-work-code-prof:hover,
+	.course-work-code-prof .col-6:hover,
+	.course-work-code-prof ul.major-icons li:hover,
+	.course-work-code-prof .coursework ul li:hover {
+		transform: none;
+	}
+}
+
+/* Ultra-Modern Coursework Section - Sleek & Stylish */
 .course-work-code-prof {
 	display: flex;
 	flex-direction: row;
@@ -4094,7 +4465,7 @@ h3 + h5 {
 	overflow: visible;
 }
 
-/* Icons Column - Purely Decorative */
+/* Icons Column - Minimalist Design */
 .course-work-code-prof .col-6:first-child {
 	display: flex;
 	align-items: center;
@@ -4106,7 +4477,7 @@ h3 + h5 {
 	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	position: relative;
 	overflow: hidden;
-	border: none;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(20px);
 }
 
@@ -4134,24 +4505,34 @@ h3 + h5 {
 	box-shadow: 
 		0 25px 50px rgba(0, 0, 0, 0.3),
 		0 0 50px rgba(59, 130, 246, 0.2);
+	border-color: rgba(59, 130, 246, 0.4);
 }
 
-/* Content Columns - Always Visible, Clean Design */
+/* Content Columns - Hidden by Default, Revealed on Hover */
 .course-work-code-prof .col-6:not(:first-child) {
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
 	border-radius: 20px;
 	padding: 35px 30px;
-	transition: none;
+	transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	backdrop-filter: blur(20px);
-	border: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	position: relative;
 	overflow: hidden;
-	opacity: 1;
-	transform: translateY(0);
+	opacity: 0.7;
+	transform: translateY(20px);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove container-level hover effects */
+.course-work-code-prof .col-6:not(:first-child):hover {
+	opacity: 1;
+	transform: translateY(-8px);
+	box-shadow: 
+		0 30px 60px rgba(0, 0, 0, 0.15),
+		0 0 30px rgba(99, 102, 241, 0.1);
+	border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Auto-reveal on main container hover */
 .course-work-code-prof:hover .col-6:not(:first-child) {
 	opacity: 1;
 	transform: translateY(0);
@@ -4182,18 +4563,18 @@ h3 + h5 {
 	position: absolute;
 	bottom: -12px;
 	left: 0;
-	width: 80px;
+	width: 0;
 	height: 4px;
 	background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
 	border-radius: 2px;
 	transition: width 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.course-work-code-prof header.major:hover h2::after {
+.course-work-code-prof .col-6:hover header.major h2::after {
 	width: 120px;
 }
 
-/* List Styling - Individual Item Hover Only */
+/* List Styling - Sleek Cards */
 .course-work-code-prof .coursework ul {
 	list-style: none;
 	padding: 0;
@@ -4204,9 +4585,9 @@ h3 + h5 {
 
 .course-work-code-prof .coursework ul li {
 	padding: 16px 24px;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	border-radius: 16px;
-	border: none;
+	border: 1px solid rgba(255, 255, 255, 0.3);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	position: relative;
 	font-weight: 600;
@@ -4235,6 +4616,7 @@ h3 + h5 {
 	box-shadow: 
 		0 15px 35px rgba(0, 0, 0, 0.1),
 		-4px 0 20px rgba(59, 130, 246, 0.15);
+	border-color: rgba(59, 130, 246, 0.3);
 	color: #1e293b;
 }
 
@@ -4244,7 +4626,7 @@ h3 + h5 {
 	transform: translateY(-50%) scale(1.5);
 }
 
-/* Icons Grid - Purely Decorative */
+/* Icons Grid - Modern Minimalist */
 .course-work-code-prof ul.major-icons {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4263,11 +4645,11 @@ h3 + h5 {
 	border-radius: 20px;
 	padding: 25px;
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	border: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
 	position: relative;
 	overflow: hidden;
-	cursor: default;
+	cursor: pointer;
 }
 
 .course-work-code-prof ul.major-icons li::before {
@@ -4306,7 +4688,7 @@ h3 + h5 {
 	color: #ffffff;
 }
 
-/* Individual icon colors on hover - Decorative */
+/* Individual icon colors on hover */
 .course-work-code-prof ul.major-icons li:nth-child(1):hover .icon { color: #ff6b6b; }
 .course-work-code-prof ul.major-icons li:nth-child(2):hover .icon { color: #4ecdc4; }
 .course-work-code-prof ul.major-icons li:nth-child(3):hover .icon { color: #45b7d1; }
@@ -4335,6 +4717,11 @@ h3 + h5 {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 15px;
 	}
+	
+	.course-work-code-prof .col-6:not(:first-child) {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media screen and (max-width: 736px) {
@@ -4350,6 +4737,10 @@ h3 + h5 {
 	.course-work-code-prof ul.major-icons {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 12px;
+	}
+	
+	.course-work-code-prof ul.major-icons li {
+		padding: 20px;
 	}
 	
 	.course-work-code-prof .col-6:not(:first-child) {
@@ -4390,26 +4781,6 @@ h3 + h5 {
 	
 	.course-work-code-prof .coursework ul li:hover {
 		transform: translateX(8px);
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.course-work-code-prof {
-		gap: 20px;
-	}
-	
-	.course-work-code-prof ul.major-icons {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 10px;
-	}
-	
-	.course-work-code-prof header.major h2 {
-		font-size: 1.2rem;
-	}
-	
-	.course-work-code-prof .coursework ul li {
-		padding: 10px 16px;
-		font-size: 0.85rem;
 	}
 }
 

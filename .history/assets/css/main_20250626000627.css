@@ -4078,39 +4078,28 @@ h3 + h5 {
     }
 }
 
-/* Ultra-Modern Coursework Section - Sleek & Clean */
+/* Enhanced Modern Coursework Section Styling */
 .course-work-code-prof {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	padding: 0;
-	gap: 30px;
-	background: transparent;
-	border-radius: 0;
-	box-shadow: none;
-	transition: none;
-	position: relative;
-	overflow: visible;
-}
-
-/* Icons Column - Purely Decorative */
-.course-work-code-prof .col-6:first-child {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-	border-radius: 24px;
-	padding: 40px 30px;
-	min-width: 200px;
-	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	padding: 30px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
+	border-radius: 20px;
+	box-shadow: 
+		0 20px 40px rgba(0, 0, 0, 0.08),
+		0 10px 20px rgba(0, 0, 0, 0.04),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	position: relative;
 	overflow: hidden;
-	border: none;
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	gap: 40px;
 }
 
-.course-work-code-prof .col-6:first-child::before {
+.course-work-code-prof::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -4118,133 +4107,166 @@ h3 + h5 {
 	right: 0;
 	bottom: 0;
 	background: linear-gradient(135deg, 
-		rgba(59, 130, 246, 0.1) 0%, 
-		rgba(147, 51, 234, 0.1) 50%, 
-		rgba(236, 72, 153, 0.1) 100%);
+		rgba(99, 102, 241, 0.02) 0%, 
+		rgba(168, 85, 247, 0.02) 50%, 
+		rgba(236, 72, 153, 0.02) 100%);
+	pointer-events: none;
 	opacity: 0;
-	transition: opacity 0.4s ease;
+	transition: opacity 0.3s ease;
 }
 
-.course-work-code-prof .col-6:first-child:hover::before {
+.course-work-code-prof:hover::before {
 	opacity: 1;
+}
+
+.course-work-code-prof:hover {
+	transform: translateY(-8px);
+	box-shadow: 
+		0 30px 60px rgba(0, 0, 0, 0.12),
+		0 15px 30px rgba(0, 0, 0, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Icons Column Styling */
+.course-work-code-prof .col-6:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+	border-radius: 16px;
+	padding: 30px 20px;
+	margin-right: 20px;
+	min-width: 180px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.course-work-code-prof .col-6:first-child::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, 
+		transparent, 
+		rgba(99, 102, 241, 0.1), 
+		transparent);
+	transition: left 0.6s ease;
+}
+
+.course-work-code-prof:hover .col-6:first-child::before {
+	left: 100%;
 }
 
 .course-work-code-prof .col-6:first-child:hover {
-	transform: translateY(-12px) scale(1.05);
-	box-shadow: 
-		0 25px 50px rgba(0, 0, 0, 0.3),
-		0 0 50px rgba(59, 130, 246, 0.2);
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+	transform: scale(1.02);
+	border-color: rgba(99, 102, 241, 0.2);
 }
 
-/* Content Columns - Always Visible, Clean Design */
+/* Content Columns Styling */
 .course-work-code-prof .col-6:not(:first-child) {
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
-	border-radius: 20px;
-	padding: 35px 30px;
-	transition: none;
-	backdrop-filter: blur(20px);
-	border: none;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 16px;
+	padding: 30px 25px;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 	position: relative;
 	overflow: hidden;
-	opacity: 1;
-	transform: translateY(0);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove container-level hover effects */
-.course-work-code-prof:hover .col-6:not(:first-child) {
-	opacity: 1;
-	transform: translateY(0);
+.course-work-code-prof .col-6:not(:first-child):hover {
+	background: rgba(255, 255, 255, 0.9);
+	transform: translateY(-4px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	border-color: rgba(99, 102, 241, 0.2);
 }
 
-/* Header Styling - Ultra Clean */
+/* Header Styling */
 .course-work-code-prof header.major {
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	position: relative;
 }
 
 .course-work-code-prof header.major h2 {
-	font-size: 2rem;
-	font-weight: 800;
-	color: #0f172a;
-	margin-bottom: 20px;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #1e293b;
+	margin-bottom: 15px;
 	position: relative;
-	transition: all 0.4s ease;
-	background: linear-gradient(135deg, #0f172a 0%, #3b82f6 100%);
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	letter-spacing: -0.02em;
 }
 
 .course-work-code-prof header.major h2::after {
 	content: '';
 	position: absolute;
-	bottom: -12px;
+	bottom: -8px;
 	left: 0;
-	width: 80px;
-	height: 4px;
-	background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 	border-radius: 2px;
-	transition: width 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.course-work-code-prof header.major:hover h2::after {
-	width: 120px;
+.course-work-code-prof .col-6:hover header.major h2::after {
+	width: 100px;
 }
 
-/* List Styling - Individual Item Hover Only */
+/* List Styling */
 .course-work-code-prof .coursework ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	display: grid;
-	gap: 12px;
 }
 
 .course-work-code-prof .coursework ul li {
-	padding: 16px 24px;
+	padding: 12px 20px;
+	margin-bottom: 8px;
 	background: rgba(255, 255, 255, 0.8);
-	border-radius: 16px;
-	border: none;
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border-radius: 12px;
+	border-left: 4px solid transparent;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	position: relative;
-	font-weight: 600;
+	font-weight: 500;
 	color: #374151;
-	backdrop-filter: blur(10px);
-	cursor: pointer;
-	transform: translateX(0);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .course-work-code-prof .coursework ul li::before {
-	content: '●';
+	content: '▶';
 	position: absolute;
 	left: 8px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: #3b82f6;
-	font-size: 8px;
+	color: #6366f1;
+	font-size: 10px;
 	transition: all 0.3s ease;
-	opacity: 0;
 }
 
 .course-work-code-prof .coursework ul li:hover {
-	background: rgba(255, 255, 255, 1);
-	transform: translateX(12px);
-	box-shadow: 
-		0 15px 35px rgba(0, 0, 0, 0.1),
-		-4px 0 20px rgba(59, 130, 246, 0.15);
+	background: rgba(255, 255, 255, 0.95);
+	border-left-color: #6366f1;
+	transform: translateX(8px);
+	box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
 	color: #1e293b;
 }
 
 .course-work-code-prof .coursework ul li:hover::before {
-	opacity: 1;
-	color: #8b5cf6;
-	transform: translateY(-50%) scale(1.5);
+	color: #a855f7;
+	transform: translateY(-50%) scale(1.2);
 }
 
-/* Icons Grid - Purely Decorative */
+/* Icons Grid Styling */
 .course-work-code-prof ul.major-icons {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4259,76 +4281,55 @@ h3 + h5 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 20px;
-	padding: 25px;
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	border: none;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 16px;
+	padding: 20px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 	backdrop-filter: blur(10px);
 	position: relative;
 	overflow: hidden;
-	cursor: default;
-}
-
-.course-work-code-prof ul.major-icons li::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(135deg, 
-		rgba(59, 130, 246, 0.2) 0%, 
-		rgba(147, 51, 234, 0.2) 100%);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-.course-work-code-prof ul.major-icons li:hover::before {
-	opacity: 1;
 }
 
 .course-work-code-prof ul.major-icons li:hover {
-	transform: translateY(-8px) scale(1.1);
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-	border-color: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.95);
+	transform: translateY(-6px) scale(1.05);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	border-color: rgba(99, 102, 241, 0.3);
 }
 
 .course-work-code-prof ul.major-icons li .icon {
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	color: rgba(255, 255, 255, 0.8);
-	position: relative;
-	z-index: 1;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .course-work-code-prof ul.major-icons li:hover .icon {
-	transform: scale(1.2) rotate(10deg);
-	color: #ffffff;
+	transform: scale(1.15) rotate(5deg);
 }
 
-/* Individual icon colors on hover - Decorative */
-.course-work-code-prof ul.major-icons li:nth-child(1):hover .icon { color: #ff6b6b; }
-.course-work-code-prof ul.major-icons li:nth-child(2):hover .icon { color: #4ecdc4; }
-.course-work-code-prof ul.major-icons li:nth-child(3):hover .icon { color: #45b7d1; }
-.course-work-code-prof ul.major-icons li:nth-child(4):hover .icon { color: #f9ca24; }
-.course-work-code-prof ul.major-icons li:nth-child(5):hover .icon { color: #a55eea; }
-.course-work-code-prof ul.major-icons li:nth-child(6):hover .icon { color: #fd79a8; }
+.course-work-code-prof ul.major-icons li:nth-child(1):hover .icon { color: #ef4444; }
+.course-work-code-prof ul.major-icons li:nth-child(2):hover .icon { color: #3b82f6; }
+.course-work-code-prof ul.major-icons li:nth-child(3):hover .icon { color: #10b981; }
+.course-work-code-prof ul.major-icons li:nth-child(4):hover .icon { color: #f59e0b; }
+.course-work-code-prof ul.major-icons li:nth-child(5):hover .icon { color: #8b5cf6; }
+.course-work-code-prof ul.major-icons li:nth-child(6):hover .icon { color: #ec4899; }
 
 .centercoursework {
 	justify-content: center !important;
 }
 
-/* Responsive Design - Mobile First */
+/* Mobile Responsive Design */
 @media screen and (max-width: 980px) {
 	.course-work-code-prof {
 		flex-direction: column;
-		gap: 40px;
+		padding: 25px;
+		gap: 30px;
 	}
 	
 	.course-work-code-prof .col-6:first-child {
+		margin-right: 0;
+		margin-bottom: 20px;
 		min-width: auto;
-		padding: 35px;
-		margin-bottom: 0;
+		padding: 25px;
 	}
 	
 	.course-work-code-prof ul.major-icons {
@@ -4339,12 +4340,13 @@ h3 + h5 {
 
 @media screen and (max-width: 736px) {
 	.course-work-code-prof {
-		gap: 30px;
+		padding: 20px;
+		gap: 25px;
+		border-radius: 16px;
 	}
 	
 	.course-work-code-prof .col-6:first-child {
-		padding: 30px;
-		border-radius: 20px;
+		padding: 20px;
 	}
 	
 	.course-work-code-prof ul.major-icons {
@@ -4353,49 +4355,24 @@ h3 + h5 {
 	}
 	
 	.course-work-code-prof .col-6:not(:first-child) {
-		padding: 25px;
-		border-radius: 16px;
+		padding: 20px;
 	}
 	
-	.course-work-code-prof header.major h2 {
-		font-size: 1.6rem;
+	.course-work-code-prof .coursework ul li {
+		padding: 10px 16px;
+		font-size: 0.9rem;
 	}
 }
 
 @media screen and (max-width: 480px) {
 	.course-work-code-prof {
-		gap: 25px;
+		padding: 15px;
+		gap: 20px;
+		border-radius: 12px;
 	}
 	
 	.course-work-code-prof .col-6:first-child {
-		padding: 25px;
-	}
-	
-	.course-work-code-prof ul.major-icons li {
 		padding: 15px;
-	}
-	
-	.course-work-code-prof .col-6:not(:first-child) {
-		padding: 20px;
-	}
-	
-	.course-work-code-prof header.major h2 {
-		font-size: 1.4rem;
-	}
-	
-	.course-work-code-prof .coursework ul li {
-		padding: 12px 18px;
-		font-size: 0.9rem;
-	}
-	
-	.course-work-code-prof .coursework ul li:hover {
-		transform: translateX(8px);
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.course-work-code-prof {
-		gap: 20px;
 	}
 	
 	.course-work-code-prof ul.major-icons {
@@ -4403,30 +4380,71 @@ h3 + h5 {
 		gap: 10px;
 	}
 	
+	.course-work-code-prof ul.major-icons li {
+		padding: 15px;
+	}
+	
+	.course-work-code-prof .col-6:not(:first-child) {
+		padding: 15px;
+	}
+	
 	.course-work-code-prof header.major h2 {
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 	}
 	
 	.course-work-code-prof .coursework ul li {
-		padding: 10px 16px;
+		padding: 8px 14px;
 		font-size: 0.85rem;
+	}
+	
+	.course-work-code-prof .coursework ul li:hover {
+		transform: translateX(4px);
 	}
 }
 
-/* Performance & Accessibility */
+@media screen and (max-width: 320px) {
+	.course-work-code-prof {
+		padding: 12px;
+		gap: 15px;
+	}
+	
+	.course-work-code-prof ul.major-icons {
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+	
+	.course-work-code-prof header.major h2 {
+		font-size: 1.3rem;
+	}
+	
+	.course-work-code-prof .coursework ul li {
+		font-size: 0.8rem;
+	}
+}
+
+/* Performance optimizations */
 .course-work-code-prof,
 .course-work-code-prof .col-6,
 .course-work-code-prof ul.major-icons li,
 .course-work-code-prof .coursework ul li {
-	will-change: transform, opacity;
+	will-change: transform;
 }
 
+/* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-	.course-work-code-prof *,
-	.course-work-code-prof *::before,
-	.course-work-code-prof *::after {
-		transition: none !important;
-		animation: none !important;
-		transform: none !important;
+	.course-work-code-prof,
+	.course-work-code-prof .col-6,
+	.course-work-code-prof ul.major-icons li,
+	.course-work-code-prof .coursework ul li,
+	.course-work-code-prof header.major h2::after {
+		transition: none;
+		animation: none;
+	}
+	
+	.course-work-code-prof:hover,
+	.course-work-code-prof .col-6:hover,
+	.course-work-code-prof ul.major-icons li:hover,
+	.course-work-code-prof .coursework ul li:hover {
+		transform: none;
 	}
 }
