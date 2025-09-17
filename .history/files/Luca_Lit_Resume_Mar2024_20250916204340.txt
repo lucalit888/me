@@ -116,9 +116,8 @@ Engineered a 3D-printed functional quadcopter model live demoed at the Dartmouth
 
 Technical coding proficiencies (proficient): Python, Terraform, Git, YAML
 Technical coding proficiencies (working knowledge): C#, HTML/CSS
-AI proficiencies: LangChain, PydanticAI, Model Context Protocol (MCP) servers, VectorDBs (Weaviate, Pinecone), Retrieval-Augmented Generation (RAG), N8N, LLM Finetuning
 Certifications: AWS Certified Developer, Certified Kubernetes Application Developer
-Adept at technologies: Docker, AWS cloud services (e.g. DynamoDB, EKS, ECS, RDS, KMS, IAM, Lambda), Kubernetes, Apache Airflow, Apache Kafka, Celery + Redis
+Adept at technologies: Docker, AWS cloud services, Kubernetes, Airflow
 Learning: React, Firebase
 
 
