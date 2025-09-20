@@ -107,13 +107,21 @@ async function askQuestion() {
 
         const data = await response.json();
         const bodyObject = JSON.parse(data.body);
-        const content = bodyObject.choices[0].message.content;
-    //
-    //    chatHistory.removeChild(typingIndicator); // Remove the typing indicator from the chat history
-    //    chatHistory.scrollTop = chatHistory.scrollHeight;
+        
+        // Check if we have an answer in the expected format
+        let answer;
+        if (bodyObject.answer) {
+            // New format from your Lambda
+            answer = bodyObject.answer;
+        } else if (bodyObject.choices && bodyObject.choices.length > 0) {
+            // OpenAI format (fallback)
+            answer = bodyObject.choices[0].message.content;
+        } else {
+            answer = 'Sorry, I couldn\'t tell you the answer to that. Ask me something else?';
+        }
 
         // Display the chatbot's answer in chat history
-        chatHistory.innerHTML += `<div><strong>Luca:</strong> ${bodyObject.choices && bodyObject.choices.length > 0 ? bodyObject.choices[0].message.content : 'Sorry, I couldn\'t tell you the answer to that. Ask me something else?'}</div>`;
+        chatHistory.innerHTML += `<div><strong>Luca:</strong> ${answer}</div>`;
     } catch (error) {
         // Handle any errors that occurred during the fetch or processing
         chatHistory.innerHTML += `<div><strong>Luca:</strong> Sorry, I couldn't get a response. Please try again later!</div>`;

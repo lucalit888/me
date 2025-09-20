@@ -108,16 +108,7 @@ async function askQuestion() {
         }
 
         const data = await response.json();
-        console.log('API Response:', data); // Debug logging
-        
-        let bodyObject;
-        try {
-            bodyObject = JSON.parse(data.body);
-        } catch (parseError) {
-            console.error('Error parsing response body:', parseError);
-            console.error('Raw body:', data.body);
-            throw new Error('Invalid response format from server');
-        }
+        const bodyObject = JSON.parse(data.body);
         
         // Check if we have an answer in the expected format
         let answer;
@@ -135,8 +126,6 @@ async function askQuestion() {
         chatHistory.innerHTML += `<div><strong>Luca:</strong> ${answer}</div>`;
     } catch (error) {
         // Handle any errors that occurred during the fetch or processing
-        console.error('Error in askQuestion:', error);
-        console.error('Error details:', error.message);
         chatHistory.innerHTML += `<div><strong>Luca:</strong> Sorry, I couldn't get a response. Please try again later!</div>`;
         isChatOpen = true; // Re-enable input if there's an error
     }
