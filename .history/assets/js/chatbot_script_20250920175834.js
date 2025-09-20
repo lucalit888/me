@@ -85,6 +85,9 @@ async function askQuestion() {
     // Clear the input field for the next question
     questionElement.value = '';
 
+    setTimeout(() => {
+        questionCount = 0; // Reset the question count after one minute
+    }, 60000*2);
 
     // Prevent further input until the response from the last question has been printed
     isChatOpen = false;

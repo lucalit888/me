@@ -77,6 +77,9 @@ async function askQuestion() {
     // Add current request time
     requestTimes.push(now);
 
+    if (questionCount >= 8) {
+        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! Taking a quick break - ask me again in a few! 😁" </div>`;
+    }
 
     // Display user's question in chat history
     const chatHistory = document.getElementById('chatHistory');
@@ -85,6 +88,9 @@ async function askQuestion() {
     // Clear the input field for the next question
     questionElement.value = '';
 
+    setTimeout(() => {
+        questionCount = 0; // Reset the question count after one minute
+    }, 60000*2);
 
     // Prevent further input until the response from the last question has been printed
     isChatOpen = false;

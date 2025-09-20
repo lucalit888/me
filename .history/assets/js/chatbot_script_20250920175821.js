@@ -44,6 +44,7 @@ async function loadResume() {
     resumeText = await response.text();
 }
 
+let questionCount = 0; // Initialize question count
 let requestTimes = []; // Track request timestamps for rate limiting
 
 async function askQuestion() {
@@ -59,24 +60,9 @@ async function askQuestion() {
         return;
     }
 
-    // Rate limiting: Check if user has exceeded 5 requests per minute
-    const now = Date.now();
-    const oneMinuteAgo = now - 60000; // 60 seconds ago
-    
-    // Remove requests older than 1 minute
-    requestTimes = requestTimes.filter(time => time > oneMinuteAgo);
-    
-    // Check if user has made too many requests
-    if (requestTimes.length >= 5) {
-        const chatHistory = document.getElementById('chatHistory');
-        chatHistory.innerHTML += `<div><strong>Luca:</strong> You're asking questions too quickly! Please wait a minute before asking again. 😊</div>`;
-        chatHistory.scrollTop = chatHistory.scrollHeight;
-        return;
+    if (questionCount >= 8) {
+        chatHistory.innerHTML += `<div>"You asked too many questions within one minute! Taking a quick break - ask me again in a few! 😁" </div>`;
     }
-    
-    // Add current request time
-    requestTimes.push(now);
-
 
     // Display user's question in chat history
     const chatHistory = document.getElementById('chatHistory');
@@ -85,6 +71,9 @@ async function askQuestion() {
     // Clear the input field for the next question
     questionElement.value = '';
 
+    setTimeout(() => {
+        questionCount = 0; // Reset the question count after one minute
+    }, 60000*2);
 
     // Prevent further input until the response from the last question has been printed
     isChatOpen = false;
