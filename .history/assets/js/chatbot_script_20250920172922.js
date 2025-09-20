@@ -83,6 +83,10 @@ async function askQuestion() {
         context: resumeText // This should be a summary of your resume.
     };
 
+    console.log('Sending payload to Lambda:', payload);
+    console.log('Question length:', question.length);
+    console.log('Context length:', resumeText.length);
+
 //    chatHistory.appendChild(typingIndicator); // Append the typing indicator to the chat history
 //    chatHistory.scrollTop = chatHistory.scrollHeight;
 
@@ -124,19 +128,13 @@ async function askQuestion() {
         if (bodyObject.answer && bodyObject.answer.trim() !== '') {
             // New format from your Lambda (with content)
             answer = bodyObject.answer;
-        } else if (bodyObject.choices && bodyObject.choices.length > 0 && bodyObject.choices[0].message.content.trim() !== '') {
+        } else if (bodyObject.choices && bodyObject.choices.length > 0) {
             // OpenAI format (fallback)
             answer = bodyObject.choices[0].message.content;
         } else {
             // Handle empty or missing answer
             console.warn('Received empty answer from Lambda:', bodyObject);
-            if (bodyObject.error) {
-                console.error('Lambda returned error:', bodyObject.error);
-                answer = 'Sorry, I couldn\'t get a response. Ask me something else, or try again later!';
-            } else {
-                // Check if it's a token limit issue (empty content but successful API call)
-                answer = 'Sorry, I ran out of processing capacity for that question. Could you retry in a few minutes?';
-            }
+            answer = 'Sorry, I couldn\'t generate a response to that question. Could you try rephrasing it or ask something else about my background?';
         }
 
         // Display the chatbot's answer in chat history

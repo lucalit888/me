@@ -132,10 +132,10 @@ async function askQuestion() {
             console.warn('Received empty answer from Lambda:', bodyObject);
             if (bodyObject.error) {
                 console.error('Lambda returned error:', bodyObject.error);
-                answer = 'Sorry, I couldn\'t get a response. Ask me something else, or try again later!';
+                answer = `Error: ${bodyObject.error}`;
             } else {
                 // Check if it's a token limit issue (empty content but successful API call)
-                answer = 'Sorry, I ran out of processing capacity for that question. Could you retry in a few minutes?';
+                answer = 'Sorry, I ran out of processing capacity for that question. Could you try asking a shorter or more specific question about my background?';
             }
         }
 
