@@ -3581,68 +3581,6 @@ input, select, textarea {
 				padding: 3em 1.5em 3em 1.5em ;
 			}
 
-		/* Resume Timeline - Mobile Optimization */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-left: 0;
-				padding-top: 2rem;
-				padding-bottom: 2rem;
-				margin: 1rem 0;
-			}
-			
-			#resume .timeline-ico {
-				position: relative;
-				left: 0;
-				top: 0;
-				margin-left: 0;
-				margin-bottom: 1rem;
-				display: block;
-			}
-			
-			#resume .timeline-header {
-				float: none;
-				width: 100%;
-				padding-right: 0;
-				text-align: left;
-				margin-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.5rem;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content {
-				margin-left: 0;
-				padding-left: 0;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.3rem;
-				padding-bottom: 1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 1rem;
-			}
-
 	}
 
 /* XSmall */
@@ -3694,39 +3632,6 @@ input, select, textarea {
 						#footer .copyright li:first-child {
 							margin-top: 0;
 						}
-			
-		/* Resume Timeline - Extra Small Mobile */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.3rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3757,58 +3662,6 @@ input, select, textarea {
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
-		
-		/* Resume Timeline - Very Small Mobile */
-		
-			#resume {
-				padding-top: 60px;
-				padding-bottom: 20px;
-			}
-			
-			#resume .resume-header h2 {
-				font-size: 1.5rem;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.2rem;
-				padding-bottom: 1.2rem;
-				margin: 0.8rem 0;
-			}
-			
-			#resume .timeline-ico {
-				height: 2.5rem;
-				width: 2.5rem;
-				line-height: 2.5rem;
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.85rem;
-				line-height: 1.5;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.85rem;
-				line-height: 1.4;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3820,18 +3673,6 @@ input, select, textarea {
    background: #fff;
    padding-top: 80px;
    padding-bottom: 30px;
-}
-
-@media screen and (max-width: 980px) {
-	#resume {
-		padding-top: 60px;
-		padding-bottom: 20px;
-	}
-	
-	#resume .resume-header h2 {
-		font-size: 1.8rem;
-		margin-bottom: 1.5rem;
-	}
 }
 
 #resume .resume-header {

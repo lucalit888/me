@@ -2506,23 +2506,6 @@ input, select, textarea {
 			padding-left: 1.2em;
 			color: #333;
 		}
-		
-		/* Remove blue border from action list items (buttons) and icon lists */
-		ul.actions li,
-		ul.actions li:hover,
-		ul.icons li,
-		ul.icons li:hover,
-		ul.big-icons li,
-		ul.big-icons li:hover {
-			border-left: none !important;
-			padding-left: 0 !important;
-			margin-left: 0 !important;
-		}
-		
-		/* Fix hover color on dark backgrounds (education section) */
-		.main.style2 ul li:hover {
-			color: rgba(255, 255, 255, 0.9) !important;
-		}
 
 		ul.alt {
 			list-style: none;
@@ -2683,8 +2666,6 @@ input, select, textarea {
 			display: inline-block;
 			padding: 0 1.25em 0 0;
 			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-			border-left: none !important;
-			margin-left: 0 !important;
 		}
 
 			ul.icons li:last-child {
@@ -2716,8 +2697,6 @@ input, select, textarea {
 		display: inline-block;
 		padding: 0.75em 1.25em 0em 0.75em;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		border-left: none !important;
-		margin-left: 0 !important;
 	}
 	
 	ul.big-icons li:hover {
@@ -3581,68 +3560,6 @@ input, select, textarea {
 				padding: 3em 1.5em 3em 1.5em ;
 			}
 
-		/* Resume Timeline - Mobile Optimization */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-left: 0;
-				padding-top: 2rem;
-				padding-bottom: 2rem;
-				margin: 1rem 0;
-			}
-			
-			#resume .timeline-ico {
-				position: relative;
-				left: 0;
-				top: 0;
-				margin-left: 0;
-				margin-bottom: 1rem;
-				display: block;
-			}
-			
-			#resume .timeline-header {
-				float: none;
-				width: 100%;
-				padding-right: 0;
-				text-align: left;
-				margin-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.5rem;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content {
-				margin-left: 0;
-				padding-left: 0;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.3rem;
-				padding-bottom: 1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 1rem;
-			}
-
 	}
 
 /* XSmall */
@@ -3694,39 +3611,6 @@ input, select, textarea {
 						#footer .copyright li:first-child {
 							margin-top: 0;
 						}
-			
-		/* Resume Timeline - Extra Small Mobile */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.3rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3757,58 +3641,6 @@ input, select, textarea {
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
-		
-		/* Resume Timeline - Very Small Mobile */
-		
-			#resume {
-				padding-top: 60px;
-				padding-bottom: 20px;
-			}
-			
-			#resume .resume-header h2 {
-				font-size: 1.5rem;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.2rem;
-				padding-bottom: 1.2rem;
-				margin: 0.8rem 0;
-			}
-			
-			#resume .timeline-ico {
-				height: 2.5rem;
-				width: 2.5rem;
-				line-height: 2.5rem;
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.85rem;
-				line-height: 1.5;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.85rem;
-				line-height: 1.4;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3820,18 +3652,6 @@ input, select, textarea {
    background: #fff;
    padding-top: 80px;
    padding-bottom: 30px;
-}
-
-@media screen and (max-width: 980px) {
-	#resume {
-		padding-top: 60px;
-		padding-bottom: 20px;
-	}
-	
-	#resume .resume-header h2 {
-		font-size: 1.8rem;
-		margin-bottom: 1.5rem;
-	}
 }
 
 #resume .resume-header {
@@ -3854,7 +3674,13 @@ input, select, textarea {
 }
 #resume .timeline-wrap::before {
   content: "";
-  display: none;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 35%;
+  top: 0;
 }
 #resume .timeline-block {
   position: relative;
@@ -3967,7 +3793,7 @@ input, select, textarea {
 
 #resume .timeline-block:hover .timeline-content h4,
 #resume .timeline-block1:hover .timeline-content h4 {
-	color: #60a5fa;
+	color: #3b82f6;
 	transform: translateX(4px);
 }
 
@@ -4012,6 +3838,17 @@ h3 + h5 {
 
 .gap {
 	margin-bottom: 40px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 12px;
+	padding: 1rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.gap:hover {
+	background: rgba(59, 130, 246, 0.02);
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .projects {

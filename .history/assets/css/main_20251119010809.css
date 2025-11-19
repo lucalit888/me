@@ -3718,15 +3718,6 @@ input, select, textarea {
 			#resume .timeline-content ul li {
 				font-size: 0.9rem;
 			}
-			
-			#resume .timeline-content p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3799,15 +3790,6 @@ input, select, textarea {
 			#resume .timeline-content ul li {
 				font-size: 0.85rem;
 				line-height: 1.5;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.85rem;
-				line-height: 1.4;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
 			}
 
 	}

@@ -198,54 +198,30 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px rgba(144, 144, 144, 0.2);
+		border-bottom: solid 1px rgba(144, 144, 144, 0.5);
 		margin: 2em 0;
-		transition: all 0.3s ease;
-		border-radius: 1px;
 	}
-	
-		hr:hover {
-			border-bottom-color: rgba(59, 130, 246, 0.3);
-		}
 
 		hr.major {
 			margin: 3em 0;
-			border-bottom-width: 3px;
 		}
 
 	blockquote {
-		border-left: solid 4px #3b82f6;
+		border-left: solid 4px rgba(144, 144, 144, 0.5);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
-		background: rgba(59, 130, 246, 0.03);
-		border-radius: 0 6px 6px 0;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		position: relative;
 	}
-	
-		blockquote:hover {
-			background: rgba(59, 130, 246, 0.06);
-			padding-left: 2.5em;
-			box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
-		}
 
 	code {
-		background: rgba(59, 130, 246, 0.08);
-		border-radius: 6px;
-		border: solid 1px rgba(59, 130, 246, 0.2);
+		background: rgba(144, 144, 144, 0.075);
+		border-radius: 4px;
+		border: solid 1px rgba(144, 144, 144, 0.5);
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
-		transition: all 0.2s ease;
-		color: #1e40af;
 	}
-	
-		code:hover {
-			background: rgba(59, 130, 246, 0.12);
-			border-color: rgba(59, 130, 246, 0.4);
-		}
 
 	pre {
 		-webkit-overflow-scrolling: touch;
@@ -2300,20 +2276,11 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		border-radius: 8px;
-		border: solid 1px rgba(144, 144, 144, 0.2);
+		border-radius: 4px;
+		border: solid 1px rgba(144, 144, 144, 0.5);
 		margin-bottom: 2em;
 		padding: 1.5em;
-		background: rgba(255, 255, 255, 0.5);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
-	
-		.box:hover {
-			border-color: rgba(59, 130, 246, 0.3);
-			box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
-			transform: translateY(-2px);
-		}
 
 		.box > :last-child,
 		.box > :last-child > :last-child,
@@ -2325,8 +2292,6 @@ input, select, textarea {
 			border: 0;
 			border-radius: 0;
 			padding: 0;
-			box-shadow: none;
-			background: transparent;
 		}
 
 /* Icon */
@@ -2443,6 +2408,10 @@ input, select, textarea {
 			display: block;
 			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
+		
+		.image:hover img {
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+		}
 
 		.image.left {
 			float: left;
@@ -2495,33 +2464,6 @@ input, select, textarea {
 
 		ul li {
 			padding-left: 0.5em;
-			transition: all 0.2s ease;
-			border-left: 2px solid transparent;
-			padding-left: 0.8em;
-			margin-left: -0.3em;
-		}
-		
-		ul li:hover {
-			border-left-color: #3b82f6;
-			padding-left: 1.2em;
-			color: #333;
-		}
-		
-		/* Remove blue border from action list items (buttons) and icon lists */
-		ul.actions li,
-		ul.actions li:hover,
-		ul.icons li,
-		ul.icons li:hover,
-		ul.big-icons li,
-		ul.big-icons li:hover {
-			border-left: none !important;
-			padding-left: 0 !important;
-			margin-left: 0 !important;
-		}
-		
-		/* Fix hover color on dark backgrounds (education section) */
-		.main.style2 ul li:hover {
-			color: rgba(255, 255, 255, 0.9) !important;
 		}
 
 		ul.alt {
@@ -2683,8 +2625,6 @@ input, select, textarea {
 			display: inline-block;
 			padding: 0 1.25em 0 0;
 			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-			border-left: none !important;
-			margin-left: 0 !important;
 		}
 
 			ul.icons li:last-child {
@@ -2716,8 +2656,6 @@ input, select, textarea {
 		display: inline-block;
 		padding: 0.75em 1.25em 0em 0.75em;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		border-left: none !important;
-		margin-left: 0 !important;
 	}
 	
 	ul.big-icons li:hover {
@@ -2746,29 +2684,19 @@ input, select, textarea {
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
-		border-collapse: separate;
-		border-spacing: 0;
 	}
 
 		table tbody tr {
 			border-left: 0;
 			border-right: 0;
-			transition: all 0.2s ease;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(144, 144, 144, 0.075);
 			}
-			
-			table tbody tr:hover {
-				background-color: rgba(59, 130, 246, 0.08);
-				transform: scale(1.01);
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-			}
 
 		table td {
 			padding: 0.75em 0.75em;
-			transition: all 0.2s ease;
 		}
 
 		table th {
@@ -2957,25 +2885,10 @@ input, select, textarea {
 
 	.main {
 		padding: 6em 0 4em 0 ;
-		transition: all 0.3s ease;
 	}
 
 		.main.style1 {
 			background: #fff;
-			position: relative;
-		}
-		
-		.main.style1::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			opacity: 0;
-			transition: opacity 0.3s ease;
-			pointer-events: none;
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 		}
 
 		.main.style2 {
@@ -3181,18 +3094,8 @@ input, select, textarea {
 			position: relative;
 		}
 
-			#header .actions li {
-				animation: fadeInUp 0.8s ease forwards;
-				opacity: 0;
-			}
-			
 			#header .actions li:first-child {
 				padding-left: 0;
-				animation-delay: 0.2s;
-			}
-			
-			#header .actions li:nth-child(2) {
-				animation-delay: 0.3s;
 			}
 
 			#header .actions li:last-child:after {
@@ -3204,17 +3107,6 @@ input, select, textarea {
 				top: 100%;
 				width: 1px;
 			}
-			
-		@keyframes fadeInUp {
-			from {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
 
 		#header .inner {
 			-moz-transition: -moz-transform 1.5s ease, opacity 2s ease;
@@ -3392,7 +3284,10 @@ input, select, textarea {
 			}
 
 		/* Header */
-		/* Padding adjusted in other breakpoints */
+
+			#header {
+				/* padding: 6em 0 6em 0 ; */
+			}
 
 	}
 
@@ -3581,68 +3476,6 @@ input, select, textarea {
 				padding: 3em 1.5em 3em 1.5em ;
 			}
 
-		/* Resume Timeline - Mobile Optimization */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-left: 0;
-				padding-top: 2rem;
-				padding-bottom: 2rem;
-				margin: 1rem 0;
-			}
-			
-			#resume .timeline-ico {
-				position: relative;
-				left: 0;
-				top: 0;
-				margin-left: 0;
-				margin-bottom: 1rem;
-				display: block;
-			}
-			
-			#resume .timeline-header {
-				float: none;
-				width: 100%;
-				padding-right: 0;
-				text-align: left;
-				margin-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.5rem;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content {
-				margin-left: 0;
-				padding-left: 0;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.3rem;
-				padding-bottom: 1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 0.5rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 1rem;
-			}
-
 	}
 
 /* XSmall */
@@ -3694,39 +3527,6 @@ input, select, textarea {
 						#footer .copyright li:first-child {
 							margin-top: 0;
 						}
-			
-		/* Resume Timeline - Extra Small Mobile */
-		
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.3rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 1rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.2rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3757,58 +3557,6 @@ input, select, textarea {
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
-		
-		/* Resume Timeline - Very Small Mobile */
-		
-			#resume {
-				padding-top: 60px;
-				padding-bottom: 20px;
-			}
-			
-			#resume .resume-header h2 {
-				font-size: 1.5rem;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .timeline-block,
-			#resume .timeline-block1 {
-				padding-top: 1.2rem;
-				padding-bottom: 1.2rem;
-				margin: 0.8rem 0;
-			}
-			
-			#resume .timeline-ico {
-				height: 2.5rem;
-				width: 2.5rem;
-				line-height: 2.5rem;
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header h3 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-header p {
-				font-size: 0.9rem;
-			}
-			
-			#resume .timeline-content h4 {
-				font-size: 1.1rem;
-			}
-			
-			#resume .timeline-content ul li {
-				font-size: 0.85rem;
-				line-height: 1.5;
-			}
-			
-			#resume .timeline-content p {
-				font-size: 0.85rem;
-				line-height: 1.4;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3820,18 +3568,6 @@ input, select, textarea {
    background: #fff;
    padding-top: 80px;
    padding-bottom: 30px;
-}
-
-@media screen and (max-width: 980px) {
-	#resume {
-		padding-top: 60px;
-		padding-bottom: 20px;
-	}
-	
-	#resume .resume-header h2 {
-		font-size: 1.8rem;
-		margin-bottom: 1.5rem;
-	}
 }
 
 #resume .resume-header {
@@ -3854,7 +3590,13 @@ input, select, textarea {
 }
 #resume .timeline-wrap::before {
   content: "";
-  display: none;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 35%;
+  top: 0;
 }
 #resume .timeline-block {
   position: relative;
@@ -3868,6 +3610,8 @@ input, select, textarea {
 
 #resume .timeline-block:hover {
 	background: rgba(59, 130, 246, 0.03);
+	transform: translateX(8px);
+	padding-left: 3.5rem;
 	box-shadow: -4px 0 12px rgba(59, 130, 246, 0.1);
 }
 
@@ -3883,6 +3627,8 @@ input, select, textarea {
 
 #resume .timeline-block1:hover {
 	background: rgba(59, 130, 246, 0.03);
+	transform: translateX(8px);
+	padding-left: 3.5rem;
 	box-shadow: -4px 0 12px rgba(59, 130, 246, 0.1);
 }
 
@@ -3917,58 +3663,24 @@ input, select, textarea {
   width: 35%;
   padding-right: 60px;
   text-align: right;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-#resume .timeline-block:hover .timeline-header,
-#resume .timeline-block1:hover .timeline-header {
-  transform: translateX(-4px);
-}
-
 #resume .timeline-header h3 {
   margin-bottom: 0;
-  transition: color 0.3s ease;
 }
-
-#resume .timeline-block:hover .timeline-header h3,
-#resume .timeline-block1:hover .timeline-header h3 {
-  color: #3b82f6;
-}
-
 #resume .timeline-header p {
   font-family: "poppins-regular", sans-serif;
   font-size: 1.6rem;
   color: #888888;
-  transition: color 0.3s ease;
-}
-
-#resume .timeline-block:hover .timeline-header p,
-#resume .timeline-block1:hover .timeline-header p {
-  color: #666666;
 }
 #resume .timeline-content {
   margin-left: 35%;
   padding-left: 80px;
 	text-align: left;
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-#resume .timeline-block:hover .timeline-content,
-#resume .timeline-block1:hover .timeline-content {
-	transform: translateX(4px);
-}
-
 #resume .timeline-content h4 {
   position: relative;
   padding-bottom: 1.8rem;
-	color: #00a693;
-	transition: all 0.3s ease;
-}
-
-#resume .timeline-block:hover .timeline-content h4,
-#resume .timeline-block1:hover .timeline-content h4 {
-	color: #60a5fa;
-	transform: translateX(4px);
+	color: #00a693
 }
 
 #resume .style2 {
@@ -4012,6 +3724,17 @@ h3 + h5 {
 
 .gap {
 	margin-bottom: 40px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 12px;
+	padding: 1rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.gap:hover {
+	background: rgba(59, 130, 246, 0.02);
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .projects {
@@ -4056,10 +3779,14 @@ h3 + h5 {
 }
 
 .enlargen-hover:hover {
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 	transform: translateY(-4px);
 }
 
-/* Removed restrictive padding override for better responsive header */
+@media screen and (max-width: 1680px)
+	#header {
+		padding: 0;
+}
 
 
 .course-work-code-prof {

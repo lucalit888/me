@@ -3632,16 +3632,6 @@ input, select, textarea {
 				line-height: 1.6;
 				margin-bottom: 0.5rem;
 			}
-			
-			#resume .timeline-content p {
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin-bottom: 1rem;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 1rem;
-			}
 
 	}
 
@@ -3718,15 +3708,6 @@ input, select, textarea {
 			#resume .timeline-content ul li {
 				font-size: 0.9rem;
 			}
-			
-			#resume .timeline-content p {
-				font-size: 0.9rem;
-				line-height: 1.5;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3800,15 +3781,6 @@ input, select, textarea {
 				font-size: 0.85rem;
 				line-height: 1.5;
 			}
-			
-			#resume .timeline-content p {
-				font-size: 0.85rem;
-				line-height: 1.4;
-			}
-			
-			#resume .resume-timeline {
-				padding: 0 0.5rem;
-			}
 
 	}
 
@@ -3820,18 +3792,6 @@ input, select, textarea {
    background: #fff;
    padding-top: 80px;
    padding-bottom: 30px;
-}
-
-@media screen and (max-width: 980px) {
-	#resume {
-		padding-top: 60px;
-		padding-bottom: 20px;
-	}
-	
-	#resume .resume-header h2 {
-		font-size: 1.8rem;
-		margin-bottom: 1.5rem;
-	}
 }
 
 #resume .resume-header {
