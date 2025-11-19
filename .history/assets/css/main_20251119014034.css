@@ -2514,20 +2514,8 @@ input, select, textarea {
 		ul.big-icons li,
 		ul.big-icons li:hover {
 			border-left: none !important;
+			padding-left: 0 !important;
 			margin-left: 0 !important;
-		}
-		
-		/* Ensure icons maintain consistent padding on hover */
-		ul.icons li {
-			padding-left: 0 !important;
-		}
-		
-		ul.actions li {
-			padding-left: 0 !important;
-		}
-		
-		ul.big-icons li {
-			padding-left: 0 !important;
 		}
 		
 		/* Fix hover color on dark backgrounds (education section) */
@@ -2538,11 +2526,6 @@ input, select, textarea {
 		/* Keep coursework/technical knowledge text dark on white background */
 		.course-work-code-prof .coursework ul li:hover {
 			color: #1e293b !important;
-		}
-		
-		/* Prevent color change on footer icon hover */
-		#footer ul.icons li:hover {
-			color: inherit !important;
 		}
 
 		ul.alt {

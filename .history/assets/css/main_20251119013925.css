@@ -2514,20 +2514,8 @@ input, select, textarea {
 		ul.big-icons li,
 		ul.big-icons li:hover {
 			border-left: none !important;
+			padding-left: 0 !important;
 			margin-left: 0 !important;
-		}
-		
-		/* Ensure icons maintain consistent padding on hover */
-		ul.icons li {
-			padding-left: 0 !important;
-		}
-		
-		ul.actions li {
-			padding-left: 0 !important;
-		}
-		
-		ul.big-icons li {
-			padding-left: 0 !important;
 		}
 		
 		/* Fix hover color on dark backgrounds (education section) */
@@ -2538,11 +2526,6 @@ input, select, textarea {
 		/* Keep coursework/technical knowledge text dark on white background */
 		.course-work-code-prof .coursework ul li:hover {
 			color: #1e293b !important;
-		}
-		
-		/* Prevent color change on footer icon hover */
-		#footer ul.icons li:hover {
-			color: inherit !important;
 		}
 
 		ul.alt {
@@ -2703,7 +2686,7 @@ input, select, textarea {
 		ul.icons li {
 			display: inline-block;
 			padding: 0 1.25em 0 0;
-			transition: transform 0.2s ease;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 			border-left: none !important;
 			margin-left: 0 !important;
 		}
@@ -2713,16 +2696,16 @@ input, select, textarea {
 			}
 			
 			ul.icons li:hover {
-				transform: translateY(-3px);
+				transform: translateY(-4px) scale(1.15);
 			}
 
-			ul.icons li .icon {
-				display: inline-block;
-			}
-			
 			ul.icons li .icon:before {
 				font-size: 1.5em;
-				transition: none;
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			
+			ul.icons li:hover .icon:before {
+				text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 			}
 
 /* Major Icons */
