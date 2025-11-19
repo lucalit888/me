@@ -61,7 +61,13 @@ Worked with engineering team to enhance automated chatbot features, boosting pro
 
 ## PROJECTS:
 
-1. StoryCloud IO (Social Media Mobile App)
+1. Heimgard AI (MCP Security Scanner)
+- Built a microservice that scans StreamableHTTP MCP servers for tool poisoning, prompt-injection, schema drift, and
+unsafe tool behaviors. Implemented dual-layer engine: 1) YARA rule-based pattern match over tool schemas/descriptions,
+2) LLM semantic auditing to detect malicious tools, missing validations, exfiltration paths, and code/description
+inconsistencies. Exposed via FastAPI with endpoints for single scans, batch processing, and vulnerability report generation.
+
+2. StoryCloud IO (Social Media Mobile App)
 Backend Engineer
 Jun 2023 – Present
 - Co-founder and solo backend developer for an AI-assisted story-telling app. Deployed a Docker-containerized FastAPI
@@ -69,23 +75,21 @@ application with 40+ integration-tested RESTful endpoints, using AWS ECS with Fa
 - Integrated endpoints with AWS cloud services, including DynamoDB, SQS, S3, Lambda. In addition, setup an
 Application Load Balancer for traffic distribution, and used CloudFront to enable request caching on GET operations.
 
-2. Fryday IO (Recipe Sharing App)
+3. Fryday IO (Recipe Sharing App)
 Full-Stack Engineer
 Jan 2024 - Present
 - Co-founder and full stack developer for an AI-powered recipe sharing platform that enables chefs (e.g. cooking influencers) to upload videos and instantly turn them into full recipes. 
 - Built on React, Firebase and Chakra UI.
 
-3. Portal VR: Virtual Reality Minigame showcasing Particle Systems, Sandbox Interactions and Gameplay Design
+4. Portal VR: Virtual Reality Minigame showcasing Particle Systems, Sandbox Interactions and Gameplay Design
 
-4. ScubaDiVR: A VR educational scuba experience in the Great Barrier Reef
+5. ScubaDiVR: A VR educational scuba experience in the Great Barrier Reef
 
-5. aMAZEing: Minigame in Unity with 3rd person controller and mouse-tracking camera
+6. aMAZEing: Minigame in Unity with 3rd person controller and mouse-tracking camera
 
-6. TelePortal: Minigame showcasing shader graphs for mirror portal effects & teleportation
+7. TelePortal: Minigame showcasing shader graphs for mirror portal effects & teleportation
 
-7. AR Fitness: Augmented Reality fitness app using Vuforia, with full-body workout plans
-
-8. Resumov: No-code platform to generate personal portfolios based on resume details. Built with ReactJS, AWS S3 and MongoDB.
+8. AR Fitness: Augmented Reality fitness app using Vuforia, with full-body workout plans
 
 
 ## RESEARCH: 
@@ -114,11 +118,11 @@ Engineered a 3D-printed functional quadcopter model live demoed at the Dartmouth
 
 
 
-Technical coding proficiencies (proficient): Python, Terraform, Git, YAML
+Technical coding proficiencies (proficient): Python, Terraform, Git, YAML, SQL
 Technical coding proficiencies (working knowledge): C#, HTML/CSS
 AI proficiencies: LangChain, PydanticAI, Model Context Protocol (MCP) servers, VectorDBs (Weaviate, Pinecone), Retrieval-Augmented Generation (RAG), N8N, LLM Finetuning
 Certifications: AWS Certified Developer, Certified Kubernetes Application Developer
-Adept at technologies: Docker, AWS cloud services (e.g. DynamoDB, EKS, ECS, RDS, KMS, IAM, Lambda), Kubernetes, Apache Airflow, Apache Kafka, Celery + Redis
+Adept at technologies: Docker, AWS cloud services (e.g. DynamoDB, EKS, ECS, RDS, KMS, IAM, Lambda), Kubernetes, Apache Airflow, Apache Kafka, Celery + Redis, PostgresDB
 Learning: React, Firebase
 
 
