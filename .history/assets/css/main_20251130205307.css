@@ -3796,11 +3796,6 @@ input, select, textarea {
 			.main {
 				padding: 2em 1em 0.1em 1em ;
 			}
-			
-			/* Add more space above About heading on very small mobile */
-			#one header.major {
-				padding-top: 1.5rem;
-			}
 
 		/* Header */
 

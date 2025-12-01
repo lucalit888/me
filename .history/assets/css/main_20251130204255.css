@@ -3512,11 +3512,6 @@ input, select, textarea {
 			#one {
 				text-align: center;
 			}
-			
-			/* Add more space above About heading on mobile */
-			#one header.major {
-				padding-top: 2.5rem;
-			}
 
 		/* Two */
 
@@ -3618,6 +3613,11 @@ input, select, textarea {
 		.projects {
 			margin-top: -50px !important;
 		}
+		
+		/* Add space between Education section and Projects section on mobile */
+		#three {
+			padding-top: 8em !important;
+		}
 	
 		#resume .timeline-block,
 		#resume .timeline-block1 {
@@ -3699,11 +3699,6 @@ input, select, textarea {
 			.main {
 				padding: 2em 1.5em 0.1em 1.5em ;
 			}
-			
-			/* Add more space above About heading on extra small mobile */
-			#one header.major {
-				padding-top: 2rem;
-			}
 
 		/* Header */
 
@@ -3746,6 +3741,11 @@ input, select, textarea {
 		/* Add more spacing before Projects section on extra small mobile */
 		.projects {
 			margin-top: -40px !important;
+		}
+		
+		/* Add space between Education section and Projects section on extra small mobile */
+		#three {
+			padding-top: 7em !important;
 		}
 	
 		#resume .timeline-block,
@@ -3796,11 +3796,6 @@ input, select, textarea {
 			.main {
 				padding: 2em 1em 0.1em 1em ;
 			}
-			
-			/* Add more space above About heading on very small mobile */
-			#one header.major {
-				padding-top: 1.5rem;
-			}
 
 		/* Header */
 
@@ -3824,6 +3819,11 @@ input, select, textarea {
 		/* Add more spacing before Projects section on very small mobile */
 		.projects {
 			margin-top: -30px !important;
+		}
+		
+		/* Add space between Education section and Projects section on very small mobile */
+		#three {
+			padding-top: 6em !important;
 		}
 	
 		#resume {
@@ -4956,28 +4956,6 @@ h3 + h5 {
 	}
 }
 
-/* Scroll Reveal Animation - Mobile Only */
-@media screen and (max-width: 736px) {
-	.scroll-reveal {
-		opacity: 0;
-		transform: translateY(30px);
-		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-	}
-
-	.scroll-reveal.revealed {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	/* Stagger animation for multiple elements */
-	.scroll-reveal:nth-child(1) { transition-delay: 0.1s; }
-	.scroll-reveal:nth-child(2) { transition-delay: 0.2s; }
-	.scroll-reveal:nth-child(3) { transition-delay: 0.3s; }
-	.scroll-reveal:nth-child(4) { transition-delay: 0.4s; }
-	.scroll-reveal:nth-child(5) { transition-delay: 0.5s; }
-	.scroll-reveal:nth-child(6) { transition-delay: 0.6s; }
-}
-
 /* Typing Animation Styles */
 .typing-effect {
 	opacity: 0;
@@ -5122,7 +5100,7 @@ h3 + h5 {
 	}
 
 	#typing-text-2 {
-		min-height: 4em; /* Reserve space for 3-line wrap on mobile */
+		min-height: 2.5em;
 		font-size: 1rem !important;
 	}
 }
@@ -5139,10 +5117,6 @@ h3 + h5 {
 
 	#typing-text-1 {
 		min-height: 6em; /* Even more space for small screens */
-	}
-
-	#typing-text-2 {
-		min-height: 5em; /* Reserve space for 4-line wrap on extra small mobile */
 	}
 
 	/* Optimize chatbot for small screens */

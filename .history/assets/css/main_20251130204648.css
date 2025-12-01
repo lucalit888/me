@@ -3512,11 +3512,6 @@ input, select, textarea {
 			#one {
 				text-align: center;
 			}
-			
-			/* Add more space above About heading on mobile */
-			#one header.major {
-				padding-top: 2.5rem;
-			}
 
 		/* Two */
 
@@ -3699,11 +3694,6 @@ input, select, textarea {
 			.main {
 				padding: 2em 1.5em 0.1em 1.5em ;
 			}
-			
-			/* Add more space above About heading on extra small mobile */
-			#one header.major {
-				padding-top: 2rem;
-			}
 
 		/* Header */
 
@@ -3795,11 +3785,6 @@ input, select, textarea {
 
 			.main {
 				padding: 2em 1em 0.1em 1em ;
-			}
-			
-			/* Add more space above About heading on very small mobile */
-			#one header.major {
-				padding-top: 1.5rem;
 			}
 
 		/* Header */
@@ -4954,28 +4939,6 @@ h3 + h5 {
 		animation: none !important;
 		transform: none !important;
 	}
-}
-
-/* Scroll Reveal Animation - Mobile Only */
-@media screen and (max-width: 736px) {
-	.scroll-reveal {
-		opacity: 0;
-		transform: translateY(30px);
-		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-	}
-
-	.scroll-reveal.revealed {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	/* Stagger animation for multiple elements */
-	.scroll-reveal:nth-child(1) { transition-delay: 0.1s; }
-	.scroll-reveal:nth-child(2) { transition-delay: 0.2s; }
-	.scroll-reveal:nth-child(3) { transition-delay: 0.3s; }
-	.scroll-reveal:nth-child(4) { transition-delay: 0.4s; }
-	.scroll-reveal:nth-child(5) { transition-delay: 0.5s; }
-	.scroll-reveal:nth-child(6) { transition-delay: 0.6s; }
 }
 
 /* Typing Animation Styles */

@@ -3507,22 +3507,18 @@ input, select, textarea {
 				padding: 5em 3em 5em 3em ;
 			}
 
-		/* One */
+	/* One */
 
-			#one {
-				text-align: center;
-			}
-			
-			/* Add more space above About heading on mobile */
-			#one header.major {
-				padding-top: 2.5rem;
-			}
+		#one {
+			text-align: center;
+			padding-top: 6em !important;
+		}
 
-		/* Two */
+	/* Two */
 
-			#two {
-				text-align: center;
-			}
+		#two {
+			text-align: center;
+		}
 
 	}
 
@@ -3585,17 +3581,22 @@ input, select, textarea {
 				line-height: 3em;
 			}
 
-		/* Main */
+	/* Main */
 
-			.main {
-				padding: 3em 1.5em 1em 1.5em ;
-			}
+		.main {
+			padding: 3em 1.5em 1em 1.5em ;
+		}
+		
+		/* Add extra padding to About section on small mobile */
+		#one {
+			padding-top: 5em !important;
+		}
 
-		/* Header */
+	/* Header */
 
-			#header {
-				padding: 4em 3em 4em 3em ;
-			}
+		#header {
+			padding: 4em 3em 4em 3em ;
+		}
 
 				#header .actions {
 					margin: 2em 0 0 0;
@@ -3699,11 +3700,6 @@ input, select, textarea {
 			.main {
 				padding: 2em 1.5em 0.1em 1.5em ;
 			}
-			
-			/* Add more space above About heading on extra small mobile */
-			#one header.major {
-				padding-top: 2rem;
-			}
 
 		/* Header */
 
@@ -3795,11 +3791,6 @@ input, select, textarea {
 
 			.main {
 				padding: 2em 1em 0.1em 1em ;
-			}
-			
-			/* Add more space above About heading on very small mobile */
-			#one header.major {
-				padding-top: 1.5rem;
 			}
 
 		/* Header */
