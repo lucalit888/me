@@ -4969,13 +4969,9 @@ h3 + h5 {
 }
 
 /* Faster animations for Projects and Contact sections */
-#three .scroll-reveal {
-	transition: opacity 0.35s ease-out, transform 0.35s ease-out;
-}
-
-/* Super fast animation for Let's Connect section */
+#three .scroll-reveal,
 #four .scroll-reveal {
-	transition: opacity 0.001s ease-out, transform 0.001s ease-out;
+	transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
 
 /* Stagger animation for multiple elements */
@@ -4988,17 +4984,6 @@ h3 + h5 {
 .scroll-reveal:nth-child(7) { transition-delay: 0.7s; }
 .scroll-reveal:nth-child(8) { transition-delay: 0.8s; }
 .scroll-reveal:nth-child(9) { transition-delay: 0.9s; }
-
-/* Faster stagger for Projects section */
-#three .scroll-reveal:nth-child(1) { transition-delay: 0.05s; }
-#three .scroll-reveal:nth-child(2) { transition-delay: 0.1s; }
-#three .scroll-reveal:nth-child(3) { transition-delay: 0.15s; }
-#three .scroll-reveal:nth-child(4) { transition-delay: 0.2s; }
-#three .scroll-reveal:nth-child(5) { transition-delay: 0.25s; }
-#three .scroll-reveal:nth-child(6) { transition-delay: 0.3s; }
-#three .scroll-reveal:nth-child(7) { transition-delay: 0.35s; }
-#three .scroll-reveal:nth-child(8) { transition-delay: 0.4s; }
-#three .scroll-reveal:nth-child(9) { transition-delay: 0.45s; }
 
 /* Typing Animation Styles */
 .typing-effect {

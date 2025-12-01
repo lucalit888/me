@@ -4969,13 +4969,9 @@ h3 + h5 {
 }
 
 /* Faster animations for Projects and Contact sections */
-#three .scroll-reveal {
-	transition: opacity 0.35s ease-out, transform 0.35s ease-out;
-}
-
-/* Super fast animation for Let's Connect section */
+#three .scroll-reveal,
 #four .scroll-reveal {
-	transition: opacity 0.001s ease-out, transform 0.001s ease-out;
+	transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
 
 /* Stagger animation for multiple elements */

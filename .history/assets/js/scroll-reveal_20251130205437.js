@@ -45,5 +45,17 @@
     } else {
         initScrollReveal();
     }
+
+    // Re-initialize on window resize if viewport changes to/from mobile
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const isMobile = window.innerWidth <= 736;
+            if (isMobile && !document.querySelector('.scroll-reveal')) {
+                initScrollReveal();
+            }
+        }, 250);
+    });
 })();
 

@@ -4973,9 +4973,9 @@ h3 + h5 {
 	transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
 
-/* Super fast animation for Let's Connect section */
+Super fast animation for Let's Connect section
 #four .scroll-reveal {
-	transition: opacity 0.001s ease-out, transform 0.001s ease-out;
+	transition: opacity 0.01s ease-out, transform 0.01s ease-out;
 }
 
 /* Stagger animation for multiple elements */
