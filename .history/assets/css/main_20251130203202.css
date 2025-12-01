@@ -3611,7 +3611,7 @@ input, select, textarea {
 		
 		/* Add more spacing before Projects section on mobile */
 		.projects {
-			margin-top: 0px !important;
+			margin-top: -50px !important;
 		}
 	
 		#resume .timeline-block,
@@ -3726,23 +3726,13 @@ input, select, textarea {
 							margin-top: 0;
 						}
 			
-	/* Resume Timeline - Extra Small Mobile */
-	
-		/* Add more padding to Education header on extra small mobile */
-		#resume .resume-header h2 {
-			padding-top: 2rem;
-		}
+		/* Resume Timeline - Extra Small Mobile */
 		
-		/* Add more spacing before Projects section on extra small mobile */
-		.projects {
-			margin-top: 0px !important;
-		}
-	
-		#resume .timeline-block,
-		#resume .timeline-block1 {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
+			#resume .timeline-block,
+			#resume .timeline-block1 {
+				padding-top: 1.5rem;
+				padding-bottom: 1.5rem;
+			}
 			
 			#resume .timeline-header h3 {
 				font-size: 1.3rem;
@@ -3799,22 +3789,12 @@ input, select, textarea {
 				padding: 2em 1em 2em 1em ;
 			}
 		
-	/* Resume Timeline - Very Small Mobile */
-	
-		/* Add more padding to Education header on very small mobile */
-		#resume .resume-header h2 {
-			padding-top: 1.5rem;
-		}
+		/* Resume Timeline - Very Small Mobile */
 		
-		/* Add more spacing before Projects section on very small mobile */
-		.projects {
-			margin-top: 0px !important;
-		}
-	
-		#resume {
-			padding-top: 60px;
-			padding-bottom: 20px;
-		}
+			#resume {
+				padding-top: 60px;
+				padding-bottom: 20px;
+			}
 			
 			#resume .resume-header h2 {
 				font-size: 1.5rem;

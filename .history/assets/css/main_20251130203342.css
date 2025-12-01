@@ -3735,7 +3735,7 @@ input, select, textarea {
 		
 		/* Add more spacing before Projects section on extra small mobile */
 		.projects {
-			margin-top: 0px !important;
+			margin-top: -40px !important;
 		}
 	
 		#resume .timeline-block,
@@ -3808,7 +3808,7 @@ input, select, textarea {
 		
 		/* Add more spacing before Projects section on very small mobile */
 		.projects {
-			margin-top: 0px !important;
+			margin-top: -30px !important;
 		}
 	
 		#resume {
