@@ -1104,19 +1104,15 @@ section { position: relative; }
 .edu-card .edu-icon {
 	display: grid;
 	place-items: center;
-	overflow: hidden;
 	width: 64px; height: 64px;
 	margin: 0 auto 1.25rem;
-	border-radius: 20px;
-	background: #0a6135; /* Dartmouth green behind the logo's clipped corners */
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .edu-card .edu-icon img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-	border-radius: inherit;
+	/* PNG carries its own rounded-corner alpha; shadow follows that shape */
+	filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
 }
 
 .edu-card h3 { font-size: 1.5rem; margin-bottom: 0.2rem; }
